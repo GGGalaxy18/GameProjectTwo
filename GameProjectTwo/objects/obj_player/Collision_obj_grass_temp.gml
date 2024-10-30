@@ -1,4 +1,4 @@
 /// @description set depth
 if other.y > y {
-	depth = 1;
+	depth = base_depth + 1;
 }

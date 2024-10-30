@@ -1,6 +1,7 @@
 /// @description variable declarations
 xdir = 0;
 ydir = 0;
+base_depth = depth;
 
 // control declarations
 left = noone;

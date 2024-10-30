@@ -33,7 +33,7 @@ if ((xdir != 0) or (ydir != 0)) {
 	x += xdir * hmove_speed;
 	y += ydir * vmove_speed;
 	x = clamp(x, 16, room_width - 16);
-	y = clamp(y, 480, room_height);
+	y = clamp(y, 416, room_height);
 }
 	
 // Idle sprite management (W sprites are flipped)
@@ -94,4 +94,4 @@ if (xdir == 0) and (ydir == 0) {
 }
 
 // Depth Management
-depth = -1;
+depth = base_depth - 1;

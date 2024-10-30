@@ -1,0 +1,1 @@
+/// @description variable declarations
