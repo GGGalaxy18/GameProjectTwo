@@ -22,7 +22,7 @@ shoot_timer = 0;
 draw_bullets = false;
 bullets = [];
 bullet_timer = 0;
-equipped_gun = "shotgun";
+equipped_gun = "pistol";
 
 // gun information
 max_magazine = {
