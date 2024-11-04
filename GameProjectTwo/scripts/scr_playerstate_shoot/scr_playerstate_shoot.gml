@@ -1,5 +1,5 @@
 function scr_playerstate_shoot() {
-	// Movement management
+	#region Movement management (has TODO)
 	if ((xdir != 0) or (ydir != 0)) {
 		direction = point_direction(0, 0, xdir * hmove_speed, ydir * vmove_speed);	// Sets direction of player
 		x += xdir * hmove_speed;
@@ -15,10 +15,11 @@ function scr_playerstate_shoot() {
 			// TODO: stamina consumption
 		} else { image_speed = 1; }
 	}
+	#endregion
 	
 	// TODO: dodge/jump
 	
-	// Idle sprite management (W sprites are flipped)
+	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
 		if (xdir < 0) {						// Facing _____ West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
@@ -47,7 +48,10 @@ function scr_playerstate_shoot() {
 				// set idle sprite
 			}
 		}
-	} else {	// Walking sprite management (W sprites are flipped)
+	}
+	#endregion
+	#region Walking sprite management (W sprites are flipped)
+	else {
 		if (xdir < 0) {						// Facing _____ West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
 			if (ydir < 0) {					// Facing North West
@@ -74,8 +78,9 @@ function scr_playerstate_shoot() {
 			}
 		}
 	}
-	// TODO: Sprint sprite management
+	#endregion
 	
+	#region shooting
 	if not player_shot {
 		if equipped_gun == "pistol" {
 			var _range_increment = 0;
@@ -139,14 +144,53 @@ function scr_playerstate_shoot() {
 			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 			player_shot = true;
 		}
+		if equipped_gun == "rifle" {
+			var _range_increment = 0;
+			var _y = y - sprite_height/2
+			var _bullet_direction = point_direction(x, _y, mouse_x, mouse_y);
+		
+			while (_range_increment < bullet_range.rifle) {
+				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
+				if _target {
+					hit_enemy(_target);
+					draw_bullets = true;
+					bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
+					break;
+				} else { _range_increment += 10; }
+			}
+			draw_bullets = true;
+			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
+			player_shot = true;
+		}
+		if equipped_gun == "sniper" {
+			var _range_increment = 0;
+			var _y = y - sprite_height/2
+			var _bullet_direction = point_direction(x, _y, mouse_x, mouse_y);
+			var _hit_enemies = [];
+		
+			while (_range_increment < bullet_range.sniper) {
+				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
+				if _target and not array_contains(_hit_enemies, _target) {
+					hit_enemy(_target);
+					array_push(_hit_enemies, _target);
+				} else { _range_increment += 10; }
+			}
+			draw_bullets = true;
+			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
+			player_shot = true;
+		}
 	} 
+	#endregion
 	
 	shoot_timer++;
+	
+	#region State switch
 	// Go to free state
-	if shoot_timer > fire_rate[$equipped_gun] {
+	if shoot_timer > fire_rate[$ equipped_gun] {
 		player_shot = false;
 		state = PLAYERSTATE.FREE;
 		shoot_timer = 0;
 		scr_playerstate_free();
 	}
+	#endregion
 }

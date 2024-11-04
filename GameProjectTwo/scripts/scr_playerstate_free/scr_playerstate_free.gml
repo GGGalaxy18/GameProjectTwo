@@ -1,5 +1,5 @@
 function scr_playerstate_free() {
-	// Movement management
+	#region Movement management
 	if ((xdir != 0) or (ydir != 0)) {
 		direction = point_direction(0, 0, xdir * hmove_speed, ydir * vmove_speed);	// Sets direction of player
 		x += xdir * hmove_speed;
@@ -15,10 +15,11 @@ function scr_playerstate_free() {
 			// TODO: stamina consumption
 		} else { image_speed = 1; }
 	}
+	#endregion
 	
 	// TODO: dodge/jump
 	
-	// Idle sprite management (W sprites are flipped)
+	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
 		if (xdir < 0) {						// Facing _____ West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
@@ -47,7 +48,10 @@ function scr_playerstate_free() {
 				// set idle sprite
 			}
 		}
-	} else {	// Walking sprite management (W sprites are flipped)
+	}
+	#endregion
+	#region Walking sprite management (W sprites are flipped)
+	else {
 		if (xdir < 0) {						// Facing _____ West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
 			if (ydir < 0) {					// Facing North West
@@ -74,10 +78,13 @@ function scr_playerstate_free() {
 			}
 		}
 	}
+	#endregion
 	
+	#region State switch
 	// Switch to shoot state
 	if (shoot) {
 		state = PLAYERSTATE.SHOOT;
 		scr_playerstate_shoot();
 	}
+	#endregion
 }
