@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_foreground_temp",
+  "%Name":"obj_pistol",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_foreground_temp",
+  "name":"obj_pistol",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -25,15 +25,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"parallax_speed","filters":[],"listItems":[],"multiselect":false,"name":"parallax_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_foreground_temp",
-    "path":"sprites/spr_foreground_temp/spr_foreground_temp.yy",
+    "name":"spr_pistol_temp",
+    "path":"sprites/spr_pistol_temp/spr_pistol_temp.yy",
   },
   "spriteMaskId":null,
   "visible":true,

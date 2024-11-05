@@ -83,21 +83,24 @@ function scr_playerstate_shoot() {
 	#region shooting
 	if not player_shot {
 		if equipped_gun == "pistol" {
+			var _x_adjust = 50 * image_xscale;
+			var _y_adjust = -sprite_height/2 - 18;
 			var _range_increment = 0;
-			var _y = y - sprite_height/2
-			var _bullet_direction = point_direction(x, _y, mouse_x, mouse_y);
+			var _x = x + _x_adjust;
+			var _y = y + _y_adjust;
+			var _bullet_direction = point_direction(_x, _y, mouse_x, mouse_y);
 		
 			while (_range_increment < bullet_range.pistol) {
-				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
+				var _target = collision_line(_x, _y, _x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
 				if _target {
 					hit_enemy(_target);
 					draw_bullets = true;
-					bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
+					bullets = [[_x, _y, _x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 					break;
 				} else { _range_increment += 10; }
 			}
 			draw_bullets = true;
-			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
+			bullets = [[_x, _y, _x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 			player_shot = true;
 		}
 		if equipped_gun == "shotgun" {

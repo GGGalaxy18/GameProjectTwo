@@ -1,8 +1,14 @@
-function scr_macros() {
-	enum PLAYERSTATE {
-		FREE,
-		SHOOT,
-		HIT,
-		DEAD
-	}
+enum PLAYERSTATE {
+	FREE,
+	SHOOT,
+	HIT,
+	DEAD
+}
+
+enum ENEMYSTATE {
+	SHROUDED,
+	REVEALED,
+	ATTACK,
+	HIT,
+	DEAD
 }

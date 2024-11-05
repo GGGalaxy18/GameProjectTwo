@@ -3,6 +3,7 @@
   "%Name":"obj_enemy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_enemy",
@@ -32,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_temp",
-    "path":"sprites/spr_player_temp/spr_player_temp.yy",
+    "name":"spr_enemy_temp",
+    "path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,4 @@
-/// @description movement and dash implementation
+/// @description state machine and inputs
 // Input definitions
 left = keyboard_check(vk_left) or keyboard_check(ord("A"));
 right = keyboard_check(vk_right) or keyboard_check(ord("D"));

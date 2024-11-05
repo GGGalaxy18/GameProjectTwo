@@ -22,7 +22,11 @@ shoot_timer = 0;
 draw_bullets = false;
 bullets = [];
 bullet_timer = 0;
-equipped_gun = "shotgun";
+equipped_gun = "pistol";
+current_magazine = 0;
+
+// DELETE LATER
+instance_create_depth(x, y, 0, obj_pistol);
 
 // gun information
 max_magazine = {

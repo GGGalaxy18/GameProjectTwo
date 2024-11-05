@@ -1,7 +1,13 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description state machine
 
-if (hit) {
-	show_debug_message(1);
-	hit = false;
+// State Machine
+switch (state) {
+	case ENEMYSTATE.SHROUDED: scr_enemystate_shrouded(); break;
+	case ENEMYSTATE.REVEALED: scr_enemystate_revealed(); break;
+	case ENEMYSTATE.ATTACK: scr_enemystate_attack(); break;
+	case ENEMYSTATE.DEAD: scr_enemystate_dead(); break;
+	case ENEMYSTATE.HIT: scr_enemystate_hit(); break;
 }
+
+// Depth Management
+depth = base_depth - 1;

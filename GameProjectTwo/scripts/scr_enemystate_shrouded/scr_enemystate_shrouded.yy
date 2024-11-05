@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enemystate_shrouded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemystate_shrouded",
+  "parent":{
+    "name":"Enemystates",
+    "path":"folders/Scripts/Enemystates.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
