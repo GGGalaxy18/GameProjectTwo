@@ -6,6 +6,8 @@ function hit_enemy(_enemy) {
 	}
 }
 
-function hit_player() {
-	
+function hit_player(_dmg) {
+	with (obj_player) {
+		health -= _dmg;
+	}
 }

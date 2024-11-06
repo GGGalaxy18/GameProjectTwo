@@ -52,4 +52,5 @@ function scr_playerstate_free() {
 		scr_playerstate_reload();
 	}
 	#endregion
+	show_debug_message(health);
 }
