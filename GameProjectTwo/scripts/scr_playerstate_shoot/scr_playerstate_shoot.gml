@@ -47,7 +47,7 @@ function scr_playerstate_shoot() {
 	#endregion
 	
 	#region shooting
-	if not player_shot {
+	if not player_shot and current_magazine > 0 {
 		if equipped_gun == "pistol" {
 			var _x_adjust = 45 * image_xscale;
 			var _y_adjust = -sprite_height/2 - 18;
@@ -148,6 +148,7 @@ function scr_playerstate_shoot() {
 			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 			player_shot = true;
 		}
+		current_magazine--;
 	} 
 	#endregion
 	

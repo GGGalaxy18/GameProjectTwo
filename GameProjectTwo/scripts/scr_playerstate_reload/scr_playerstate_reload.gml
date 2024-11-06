@@ -1,4 +1,5 @@
-function scr_playerstate_free() {
+function scr_playerstate_reload() {
+	var _reload_time = reload_speed[$ equipped_gun];
 	#region Movement management
 	if ((xdir != 0) or (ydir != 0)) {
 		direction = point_direction(0, 0, xdir * hmove_speed, ydir * vmove_speed);	// Sets direction of player
@@ -6,17 +7,8 @@ function scr_playerstate_free() {
 		y += lengthdir_y(abs(ydir), direction) * vmove_speed;
 		x = clamp(x, 16, room_width - 16);
 		y = clamp(y, 416, room_height);
-		
-		if (sprint) {
-			x += sprint_additive * xdir;
-			y += sprint_additive * ydir;
-			var _speed_increase_percent = sqrt(sqr(xdir*(hmove_speed + sprint_additive)) + sqr(ydir*(vmove_speed +  sprint_additive))) / hmove_speed;
-			image_speed = _speed_increase_percent;
-			// TODO: stamina consumption
-		} else { image_speed = 1; }
 	}
 	#endregion
-	// TODO: dodge/jump
 	
 	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
@@ -39,16 +31,16 @@ function scr_playerstate_free() {
 	}
 	#endregion
 	
+	reload_timer++;
 	#region State switch
 	// Switch to shoot state
-	if (shoot) {
-		state = PLAYERSTATE.SHOOT;
-		scr_playerstate_shoot();
-	}
-	
-	if (reload and current_magazine < max_magazine[$ equipped_gun]) {
-		state = PLAYERSTATE.RELOAD;
-		scr_playerstate_reload();
+	if (reload_timer >= _reload_time) {
+		// perform reload stuff
+		current_magazine = max_magazine[$ equipped_gun];
+		
+		reload_timer = 0;
+		state = PLAYERSTATE.FREE;
+		scr_playerstate_free();
 	}
 	#endregion
 }

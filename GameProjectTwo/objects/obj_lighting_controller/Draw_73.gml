@@ -22,18 +22,22 @@ camera_apply(_camera);
 
 gpu_set_blendmode(bm_subtract);
 
-var _light_sprite = spr_light;
+#region player spotlight
+var _light_sprite = spr_light_pix;
 with (obj_player) {
 	var _scale = 1.25;
 	draw_sprite_ext(_light_sprite, 0, x, y-sprite_height/2, _scale, _scale, 0, c_white, 1);
 }
+#endregion
 
+#region bullet light
 if (obj_player.draw_bullets) {
 	var _bullet_arr = obj_player.drawn_bullets;
 	for (var _i=0; _i<array_length(_bullet_arr); _i++) {
 		draw_sprite_ext(spr_light_bullet, 0, _bullet_arr[_i][0], _bullet_arr[_i][1], _bullet_arr[_i][2], 2, _bullet_arr[_i][3], c_white, 1);
 	}
 }
+#endregion
 
 gpu_set_blendmode(bm_normal);
 

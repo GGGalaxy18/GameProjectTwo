@@ -2,7 +2,8 @@ enum PLAYERSTATE {
 	FREE,
 	SHOOT,
 	HIT,
-	DEAD
+	DEAD,
+	RELOAD
 }
 
 enum ENEMYSTATE {

@@ -12,7 +12,7 @@ sprint = noone;
 //dash = noone;
 //melee_attack = noone;
 shoot = noone;
-//reload = noone;
+reload = noone;
 
 state = PLAYERSTATE.FREE;
 
@@ -24,7 +24,10 @@ drawn_bullets = [];
 bullets = [];
 bullet_timer = 0;
 equipped_gun = "pistol";
-current_magazine = 0;
+current_magazine = 12;
+
+// reload state vars
+reload_timer = 0;
 
 // DELETE LATER
 instance_create_depth(x, y, 0, obj_pistol);

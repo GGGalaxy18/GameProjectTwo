@@ -35,18 +35,15 @@ if (draw_bullets) {
 }
 
 
-//Player health 
-//shader_set(sh_shader);
+#region player health
 draw_self();
-//shader_reset();
 
-var health_gui_timer = 30;
-// health count
+var _health_gui_timer = 30;
 var _show_health = true;
-if health = max_health {
-	health_gui_timer++;
-	if health_gui_timer > 30 _show_health = false;
-} else health_gui_timer = 0;
+if health == max_health {
+	_health_gui_timer++;
+	if _health_gui_timer > 30 _show_health = false;
+} else _health_gui_timer = 0;
 if _show_health {
 	show_debug_message(health)
 	for (var i = 0; i < health  ; i++) {
@@ -55,3 +52,4 @@ if _show_health {
 		} else draw_sprite(spr_health_bar, 1, x - 80 + (20 * i), y - 220);
 	}
 }
+#endregion
