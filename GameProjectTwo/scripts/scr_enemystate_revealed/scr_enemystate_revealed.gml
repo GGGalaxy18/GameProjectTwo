@@ -10,11 +10,12 @@ function scr_enemystate_revealed() {
 	#endregion
 	
 	#region movement
-	mp_potential_step_object(obj_player.x, obj_player.y, 3, noone);
+	var _adjusted_speed = move_speed_revealed / 4 * cos(pi * direction/90) + 3 * move_speed_revealed / 4;
+	mp_potential_step_object(obj_player.x, obj_player.y, _adjusted_speed, noone);
 	#endregion
 	
 	#region switch states
-	if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) > 250 {
+	if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
 		state = ENEMYSTATE.SHROUDED;
 		scr_enemystate_shrouded();
 	}

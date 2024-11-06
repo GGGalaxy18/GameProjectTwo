@@ -20,6 +20,7 @@ state = PLAYERSTATE.FREE;
 player_shot = false;
 shoot_timer = 0;
 draw_bullets = false;
+drawn_bullets = [];
 bullets = [];
 bullet_timer = 0;
 equipped_gun = "pistol";

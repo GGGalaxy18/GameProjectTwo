@@ -28,6 +28,13 @@ with (obj_player) {
 	draw_sprite_ext(_light_sprite, 0, x, y-sprite_height/2, _scale, _scale, 0, c_white, 1);
 }
 
+if (obj_player.draw_bullets) {
+	var _bullet_arr = obj_player.drawn_bullets;
+	for (var _i=0; _i<array_length(_bullet_arr); _i++) {
+		draw_sprite_ext(spr_light_bullet, 0, _bullet_arr[_i][0], _bullet_arr[_i][1], _bullet_arr[_i][2], 2, _bullet_arr[_i][3], c_white, 1);
+	}
+}
+
 gpu_set_blendmode(bm_normal);
 
 surface_reset_target();

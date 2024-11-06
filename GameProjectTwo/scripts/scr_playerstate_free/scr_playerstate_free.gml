@@ -2,8 +2,8 @@ function scr_playerstate_free() {
 	#region Movement management
 	if ((xdir != 0) or (ydir != 0)) {
 		direction = point_direction(0, 0, xdir * hmove_speed, ydir * vmove_speed);	// Sets direction of player
-		x += xdir * hmove_speed;
-		y += ydir * vmove_speed;
+		x += lengthdir_x(abs(xdir), direction) * hmove_speed;
+		y += lengthdir_y(abs(ydir), direction) * vmove_speed;
 		x = clamp(x, 16, room_width - 16);
 		y = clamp(y, 416, room_height);
 		
@@ -16,7 +16,6 @@ function scr_playerstate_free() {
 		} else { image_speed = 1; }
 	}
 	#endregion
-	
 	// TODO: dodge/jump
 	
 	#region Idle sprite management (W sprites are flipped)
