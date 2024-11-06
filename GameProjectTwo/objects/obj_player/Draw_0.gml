@@ -3,14 +3,29 @@ draw_self();
 
 if (draw_bullets) {
 	bullet_timer++;
+	draw_set_alpha(bullet_timer/min(10, fire_rate[$ equipped_gun]));
 	for (var _i=0; _i<array_length(bullets); _i++) {
-		draw_line(bullets[_i][0], bullets[_i][1], bullets[_i][2], bullets[_i][3]);
+		var _dir = point_direction(bullets[_i][0], bullets[_i][1], bullets[_i][2], bullets[_i][3]);
+		var _len = point_distance(bullets[_i][0], bullets[_i][1], bullets[_i][2], bullets[_i][3]);
+		var _len_fracx = lengthdir_x(_len/4, _dir);
+		var _len_fracy = lengthdir_y(_len/4, _dir);
+		var _x = bullets[_i][0];
+		var _y = bullets[_i][1];
+		
+		var _offset_x = lengthdir_x(20, _dir);
+		var _offset_y = lengthdir_y(20, _dir);
+		draw_line_width(_x + _offset_x, _y + _offset_y, _x + _len_fracx, _y + _len_fracy, 1);
+		draw_line_width(_x + _len_fracx, _y + _len_fracy, _x + _len_fracx * 2, _y + _len_fracy * 2, 2);
+		draw_line_width(_x + _len_fracx * 2, _y + _len_fracy * 2, _x + _len_fracx * 3, _y + _len_fracy * 3, 3);
+		draw_line_width(_x + _len_fracx * 3, _y + _len_fracy * 3, _x + _len_fracx * 4, _y + _len_fracy * 4, 4);
+		
 	}
-	if bullet_timer > 10 {
+	if bullet_timer > min(10, fire_rate[$ equipped_gun]) {
 		bullet_timer = 0;
 		draw_bullets = false;
 		bullets = [];
 	}
+	draw_set_alpha(1);
 }
 
 

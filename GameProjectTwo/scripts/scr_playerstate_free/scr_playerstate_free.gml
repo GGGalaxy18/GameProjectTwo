@@ -21,61 +21,21 @@ function scr_playerstate_free() {
 	
 	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
-		if (xdir < 0) {						// Facing _____ West
+		// set E sprite
+		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
-			if (ydir < 0) {					// Facing North West
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South West
-				// set SW sprite
-			} else {						// Facing West
-				// set E sprite
-			}
-		} else if (xdir > 0) {				// Facing _____ East
+		} else if (xdir > 0) {				// Facing East
 			image_xscale = 1 * abs(image_xscale);	// Set sprite to face right
-			if (ydir < 0) {					// Facing North East
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South East
-				// set SE sprite
-			} else {						// Facing East
-				// set E sprite
-			}
-		} else {							// Facing North, South, or nowhere
-			if (ydir < 0) {					// Facing North
-				// set N sprite
-			} else if (ydir > 0) {			// Facing South
-				// set S sprite
-			} else {						// Facing nowhere (shouldn't be reached)
-				// set idle sprite
-			}
 		}
 	}
 	#endregion
 	#region Walking sprite management (W sprites are flipped)
 	else {
-		if (xdir < 0) {						// Facing _____ West
+		// set E sprite
+		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
-			if (ydir < 0) {					// Facing North West
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South West
-				// set SE sprite
-			} else {						// Facing West
-				// set E sprite
-			}
-		} else if (xdir > 0) {				// Facing _____ East
+		} else if (xdir > 0) {				// Facing East
 			image_xscale = 1 * abs(image_xscale);	// Set sprite to face right
-			if (ydir < 0) {					// Facing North East
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South East
-				// set SE sprite
-			} else {						// Facing East
-				// set E sprite
-			}
-		} else {							// Facing North, South, or nowhere
-			if (ydir < 0) {					// Facing North
-				// set N sprite
-			} else if (ydir > 0) {			// Facing South
-				// set S sprite
-			}
 		}
 	}
 	#endregion

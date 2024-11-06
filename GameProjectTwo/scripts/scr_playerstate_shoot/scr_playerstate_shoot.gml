@@ -21,69 +21,35 @@ function scr_playerstate_shoot() {
 	
 	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
-		if (xdir < 0) {						// Facing _____ West
+		// set E sprite
+		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
-			if (ydir < 0) {					// Facing North West
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South West
-				// set SW sprite
-			} else {						// Facing West
-				// set E sprite
-			}
-		} else if (xdir > 0) {				// Facing _____ East
+		} else if (xdir > 0) {				// Facing East
 			image_xscale = 1 * abs(image_xscale);	// Set sprite to face right
-			if (ydir < 0) {					// Facing North East
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South East
-				// set SE sprite
-			} else {						// Facing East
-				// set E sprite
-			}
-		} else {							// Facing North, South, or nowhere
-			if (ydir < 0) {					// Facing North
-				// set N sprite
-			} else if (ydir > 0) {			// Facing South
-				// set S sprite
-			} else {						// Facing nowhere (shouldn't be reached)
-				// set idle sprite
-			}
 		}
 	}
 	#endregion
 	#region Walking sprite management (W sprites are flipped)
 	else {
-		if (xdir < 0) {						// Facing _____ West
+		// set E sprite
+		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
-			if (ydir < 0) {					// Facing North West
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South West
-				// set SE sprite
-			} else {						// Facing West
-				// set E sprite
-			}
-		} else if (xdir > 0) {				// Facing _____ East
+		} else if (xdir > 0) {				// Facing East
 			image_xscale = 1 * abs(image_xscale);	// Set sprite to face right
-			if (ydir < 0) {					// Facing North East
-				// set NE sprite
-			} else if (ydir > 0) {			// Facing South East
-				// set SE sprite
-			} else {						// Facing East
-				// set E sprite
-			}
-		} else {							// Facing North, South, or nowhere
-			if (ydir < 0) {					// Facing North
-				// set N sprite
-			} else if (ydir > 0) {			// Facing South
-				// set S sprite
-			}
 		}
 	}
+	#endregion
+	#region Shooting sprite management (W sprites are flipped)
+	var _dir = point_direction(x, y, mouse_x, mouse_y);
+	if lengthdir_x(1, _dir) < 0{
+		image_xscale = abs(image_xscale) * -1;
+	} else { image_xscale = abs(image_xscale); }
 	#endregion
 	
 	#region shooting
 	if not player_shot {
 		if equipped_gun == "pistol" {
-			var _x_adjust = 50 * image_xscale;
+			var _x_adjust = 45 * image_xscale;
 			var _y_adjust = -sprite_height/2 - 18;
 			var _range_increment = 0;
 			var _x = x + _x_adjust;
