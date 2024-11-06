@@ -6,7 +6,7 @@
 #endregion
 
 #region grenata gui
-for(var i=0; i < cur_grenades; i++){
-	draw_sprite(spr_grenade,0,20 +(50 * i) ,50);
+for(var _i=0; _i < cur_grenades; _i++){
+	draw_sprite(spr_grenade,0,20 +(50 * _i) ,50);
 }
 #endregion

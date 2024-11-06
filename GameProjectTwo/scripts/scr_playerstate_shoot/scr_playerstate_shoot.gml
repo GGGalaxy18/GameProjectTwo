@@ -77,8 +77,8 @@ function scr_playerstate_shoot() {
 			
 			for (var _i=0; _i<_bullet_per_shell; _i++) {
 				var _range_increment = 0;
-				var _x2;
-				var _y2;
+				var _x2 = x;
+				var _y2 = _y;
 				while (_range_increment < bullet_range.shotgun) {
 					_x2 = x + lengthdir_x(_range_increment, _bullet_direction - (_bullet_spread/_bullet_per_shell * _i));
 					_y2 = _y + lengthdir_y(_range_increment, _bullet_direction - (_bullet_spread/_bullet_per_shell * _i));
@@ -161,6 +161,12 @@ function scr_playerstate_shoot() {
 		state = PLAYERSTATE.FREE;
 		shoot_timer = 0;
 		scr_playerstate_free();
+	}
+	
+	// Switch to reload state
+	if (reload and current_magazine < max_magazine[$ equipped_gun]) {
+		state = PLAYERSTATE.RELOAD;
+		scr_playerstate_reload();
 	}
 	#endregion
 }

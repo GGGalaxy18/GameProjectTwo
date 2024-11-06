@@ -1,6 +1,9 @@
 function hit_enemy(_enemy) {
-	//_enemy.hit = true;
-	show_debug_message("hit_enemy: 1");
+	with (_enemy) {
+		// TODO: set direction based on player hit
+		state = ENEMYSTATE.HIT;
+		scr_enemystate_hit();
+	}
 }
 
 function hit_player() {

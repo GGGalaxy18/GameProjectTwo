@@ -71,12 +71,11 @@ reload_speed = {
 
 
 
-//Player health bar setup
-max_health = 8;
+// Player health bar setup
 hp = max_health;
 health = hp;
 
-//grenades
+// Grenades
 max_grenades = 3
 // will be made dynamic later
 cur_grenades = 3

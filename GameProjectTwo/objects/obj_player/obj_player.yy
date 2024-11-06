@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v1","%Name":"hmove_speed","filters":[],"listItems":[],"multiselect":false,"name":"hmove_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"vmove_speed","filters":[],"listItems":[],"multiselect":false,"name":"vmove_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"sprint_additive","filters":[],"listItems":[],"multiselect":false,"name":"sprint_additive","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"max_health","filters":[],"listItems":[],"multiselect":false,"name":"max_health","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"8","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

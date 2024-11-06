@@ -46,10 +46,10 @@ if health == max_health {
 } else _health_gui_timer = 0;
 if _show_health {
 	show_debug_message(health)
-	for (var i = 0; i < health  ; i++) {
+	for (var _i = 0; _i < health  ; _i++) {
 		if i < health {
-			draw_sprite_ext(spr_health_bar, 0, x - 80 + (20 * i), y - 220, .75,.75,0,c_white,1);
-		} else draw_sprite(spr_health_bar, 1, x - 80 + (20 * i), y - 220);
+			draw_sprite_ext(spr_health_bar, 0, x - 80 + (20 * _i), y - 220, .75,.75,0,c_white,1);
+		} else draw_sprite(spr_health_bar, 1, x - 80 + (20 * _i), y - 220);
 	}
 }
 #endregion

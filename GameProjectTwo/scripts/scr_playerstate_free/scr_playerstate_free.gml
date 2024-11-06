@@ -46,6 +46,7 @@ function scr_playerstate_free() {
 		scr_playerstate_shoot();
 	}
 	
+	// Switch to reload state
 	if (reload and current_magazine < max_magazine[$ equipped_gun]) {
 		state = PLAYERSTATE.RELOAD;
 		scr_playerstate_reload();
