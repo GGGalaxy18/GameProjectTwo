@@ -50,6 +50,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
     {"id":{"name":"scr_enemystate_attack","path":"scripts/scr_enemystate_attack/scr_enemystate_attack.yy",},},
+    {"id":{"name":"scr_enemystate_dead","path":"scripts/scr_enemystate_dead/scr_enemystate_dead.yy",},},
     {"id":{"name":"scr_enemystate_hit","path":"scripts/scr_enemystate_hit/scr_enemystate_hit.yy",},},
     {"id":{"name":"scr_enemystate_revealed","path":"scripts/scr_enemystate_revealed/scr_enemystate_revealed.yy",},},
     {"id":{"name":"scr_enemystate_shrouded","path":"scripts/scr_enemystate_shrouded/scr_enemystate_shrouded.yy",},},

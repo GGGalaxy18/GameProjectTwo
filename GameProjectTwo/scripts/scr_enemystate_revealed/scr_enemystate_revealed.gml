@@ -29,5 +29,12 @@ function scr_enemystate_revealed() {
 		state = ENEMYSTATE.SHROUDED;
 		scr_enemystate_shrouded();
 	}
+	
+	if alarm_get(0) <= 0 and point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) < attack_radius {
+		alarm[0] = attack_cooldown;
+		
+		state = ENEMYSTATE.ATTACK;
+		scr_enemystate_attack();
+	}
 	#endregion
 }

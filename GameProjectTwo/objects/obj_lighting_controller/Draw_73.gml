@@ -25,7 +25,7 @@ gpu_set_blendmode(bm_subtract);
 #region player spotlight
 var _light_sprite = spr_light_pix;
 with (obj_player) {
-	var _scale = 1.25;
+	var _scale = .9;
 	draw_sprite_ext(_light_sprite, 0, x, y-sprite_height/2, _scale, _scale, 0, c_white, 1);
 }
 #endregion

@@ -1,0 +1,1 @@
+/// @description take damage cooldown

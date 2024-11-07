@@ -1,6 +1,5 @@
-function scr_enemystate_attack() {
+function scr_enemystate_revealed() {
 	direction = point_direction(x, y, obj_player.x, obj_player.y);
-	var _attack_time = 30;
 	#region sprite management
 	if sprite_index != spr_enemy_temp {
 		sprite_index = spr_enemy_temp;
@@ -25,24 +24,10 @@ function scr_enemystate_attack() {
 	}
 	#endregion
 	
-	attack_timer++;
 	#region switch states
-	if attack_timer >= _attack_time {
-		attack_timer = 0;
-		
-		// TODO Move this code around
-		if (obj_player.alarm[0] <= 0) {
-			hit_player(1);
-			obj_player.alarm[0] = obj_player.take_dmg_cooldown;
-		}
-		
-		if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
-			state = ENEMYSTATE.SHROUDED;
-			scr_enemystate_shrouded();
-		} else {
-			state = ENEMYSTATE.REVEALED;
-			scr_enemystate_revealed()
-		}
+	if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
+		state = ENEMYSTATE.SHROUDED;
+		scr_enemystate_shrouded();
 	}
 	#endregion
 }
