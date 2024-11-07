@@ -38,6 +38,7 @@
   },
   "name":"GameProjectTwo",
   "resources":[
+    {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
     {"id":{"name":"obj_crate_temp","path":"objects/obj_crate_temp/obj_crate_temp.yy",},},
     {"id":{"name":"obj_dialog_entry","path":"objects/obj_dialog_entry/obj_dialog_entry.yy",},},
     {"id":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},},
@@ -48,7 +49,10 @@
     {"id":{"name":"obj_parallax_controller","path":"objects/obj_parallax_controller/obj_parallax_controller.yy",},},
     {"id":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_title_enemy","path":"objects/obj_title_enemy/obj_title_enemy.yy",},},
+    {"id":{"name":"obj_title_screen_controller","path":"objects/obj_title_screen_controller/obj_title_screen_controller.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"id":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
     {"id":{"name":"scr_enemystate_attack","path":"scripts/scr_enemystate_attack/scr_enemystate_attack.yy",},},
     {"id":{"name":"scr_enemystate_dead","path":"scripts/scr_enemystate_dead/scr_enemystate_dead.yy",},},
     {"id":{"name":"scr_enemystate_hit","path":"scripts/scr_enemystate_hit/scr_enemystate_hit.yy",},},
@@ -85,6 +89,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
   ],
   "templateType":"game",

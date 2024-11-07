@@ -3,3 +3,5 @@ hitbox_struct = {
 	y_offset: 0
 }
 instance_create_layer(x, y, "Instances", obj_foot_hitbox, hitbox_struct);
+
+base_depth = depth;

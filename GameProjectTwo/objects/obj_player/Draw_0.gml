@@ -1,6 +1,7 @@
 // @description draw bullet tracers
 draw_self();
 
+#region bullets
 if (draw_bullets) {
 	var _bullet_timer_max = 10;
 	drawn_bullets = [];
@@ -16,7 +17,7 @@ if (draw_bullets) {
 		var _offset_x = lengthdir_x(20, _dir);
 		var _offset_y = lengthdir_y(20, _dir);
 		
-		// Draw bullet trail
+		// draw bullet trail
 		draw_line_width(_x + _offset_x, _y + _offset_y, _x + _len_fracx, _y + _len_fracy, 1);
 		draw_line_width(_x + _len_fracx, _y + _len_fracy, _x + _len_fracx * 2, _y + _len_fracy * 2, 2);
 		draw_line_width(_x + _len_fracx * 2, _y + _len_fracy * 2, _x + _len_fracx * 3, _y + _len_fracy * 3, 3);
@@ -24,6 +25,7 @@ if (draw_bullets) {
 		
 		draw_set_alpha(1);
 		
+		// save bullet info for lighting
 		array_push(drawn_bullets, [_x + _len_fracx * 2, _y + _len_fracy * 2, (_len + 60) / sprite_get_width(spr_light_bullet), _dir]);
 	}
 	if bullet_timer > min(_bullet_timer_max, fire_rate[$ equipped_gun]) {
@@ -33,11 +35,9 @@ if (draw_bullets) {
 	}
 	bullet_timer++;
 }
-
+#endregion
 
 #region player health
-draw_self();
-
 var _health_gui_timer = 30;
 var _show_health = true;
 if health == max_health {
