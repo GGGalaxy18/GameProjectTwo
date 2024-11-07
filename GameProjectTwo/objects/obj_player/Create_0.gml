@@ -71,10 +71,17 @@ reload_speed = {
 
 
 
-// Player health bar setup
+// player health
 health = max_health;
 
-// Grenades
+// player stamina
+stamina = max_stamina;
+stamina_recharge = 2;
+recharge_delay = 60;
+recharge_delay_timer = 0;
+sprint_consumption = 4;
+
+// grenades
 max_grenades = 3
 // will be made dynamic later
 cur_grenades = 3

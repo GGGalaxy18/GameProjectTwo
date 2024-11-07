@@ -8,13 +8,21 @@ function scr_playerstate_free() {
 		y = clamp(y, 416, room_height);
 		
 		if (sprint) {
-			x += sprint_additive * xdir;
-			y += sprint_additive * ydir;
-			var _speed_increase_percent = sqrt(sqr(xdir*(hmove_speed + sprint_additive)) + sqr(ydir*(vmove_speed +  sprint_additive))) / hmove_speed;
-			image_speed = _speed_increase_percent;
-			// TODO: stamina consumption
+			if stamina > sprint_consumption {
+				x += sprint_additive * xdir;
+				y += sprint_additive * ydir;
+				var _speed_increase_percent = sqrt(sqr(xdir*(hmove_speed + sprint_additive)) + sqr(ydir*(vmove_speed +  sprint_additive))) / hmove_speed;
+				image_speed = _speed_increase_percent;
+				stamina -= sprint_consumption;
+				recharge_delay_timer = 0;
+			}
 		} else { image_speed = 1; }
 	}
+	if recharge_delay_timer >= recharge_delay {
+		stamina += stamina_recharge;
+		stamina = clamp(stamina, 0, max_stamina);
+	}
+	recharge_delay_timer++;
 	#endregion
 	// TODO: dodge/jump
 	
