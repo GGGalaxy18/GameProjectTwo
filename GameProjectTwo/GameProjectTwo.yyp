@@ -40,6 +40,7 @@
   "name":"GameProjectTwo",
   "resources":[
     {"id":{"name":"fnt_button","path":"fonts/fnt_button/fnt_button.yy",},},
+    {"id":{"name":"fnt_menu_title","path":"fonts/fnt_menu_title/fnt_menu_title.yy",},},
     {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
     {"id":{"name":"obj_crate_temp","path":"objects/obj_crate_temp/obj_crate_temp.yy",},},
     {"id":{"name":"obj_dialog_entry","path":"objects/obj_dialog_entry/obj_dialog_entry.yy",},},
@@ -48,6 +49,7 @@
     {"id":{"name":"obj_foot_hitbox","path":"objects/obj_foot_hitbox/obj_foot_hitbox.yy",},},
     {"id":{"name":"obj_grenade","path":"objects/obj_grenade/obj_grenade.yy",},},
     {"id":{"name":"obj_lighting_controller","path":"objects/obj_lighting_controller/obj_lighting_controller.yy",},},
+    {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_parallax_controller","path":"objects/obj_parallax_controller/obj_parallax_controller.yy",},},
     {"id":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
@@ -61,6 +63,7 @@
     {"id":{"name":"scr_enemystate_revealed","path":"scripts/scr_enemystate_revealed/scr_enemystate_revealed.yy",},},
     {"id":{"name":"scr_enemystate_shrouded","path":"scripts/scr_enemystate_shrouded/scr_enemystate_shrouded.yy",},},
     {"id":{"name":"scr_foreground_manager","path":"scripts/scr_foreground_manager/scr_foreground_manager.yy",},},
+    {"id":{"name":"scr_gun_management","path":"scripts/scr_gun_management/scr_gun_management.yy",},},
     {"id":{"name":"scr_hit","path":"scripts/scr_hit/scr_hit.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"scr_playerstate_free","path":"scripts/scr_playerstate_free/scr_playerstate_free.yy",},},

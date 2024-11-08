@@ -110,7 +110,7 @@
     "9647":{"character":9647,"h":38,"offset":6,"shift":31,"w":19,"x":175,"y":202,},
   },
   "hinting":0,
-  "includeTTF":false,
+  "includeTTF":true,
   "interpreter":0,
   "italic":false,
   "kerningPairs":[],
@@ -138,6 +138,6 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "TTFName":"",
+  "TTFName":"C:\\Users\\Lucas\\ITCS4230\\GameProjectTwo\\GameProjectTwo\\fonts\\fnt_button\\PasseroOne-Regular.ttf",
   "usesSDF":false,
 }

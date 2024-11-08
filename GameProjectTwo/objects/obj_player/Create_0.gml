@@ -70,7 +70,6 @@ reload_speed = {
 }
 
 
-
 // player health
 health = max_health;
 
