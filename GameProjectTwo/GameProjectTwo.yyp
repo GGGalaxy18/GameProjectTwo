@@ -73,6 +73,7 @@
     {"id":{"name":"scr_playerstate_free","path":"scripts/scr_playerstate_free/scr_playerstate_free.yy",},},
     {"id":{"name":"scr_playerstate_reload","path":"scripts/scr_playerstate_reload/scr_playerstate_reload.yy",},},
     {"id":{"name":"scr_playerstate_shoot","path":"scripts/scr_playerstate_shoot/scr_playerstate_shoot.yy",},},
+    {"id":{"name":"sh_desaturated","path":"shaders/sh_desaturated/sh_desaturated.yy",},},
     {"id":{"name":"spr_cc_background_temp1","path":"sprites/spr_cc_background_temp1/spr_cc_background_temp1.yy",},},
     {"id":{"name":"spr_cc_background_temp2","path":"sprites/spr_cc_background_temp2/spr_cc_background_temp2.yy",},},
     {"id":{"name":"spr_cc_background_temp3","path":"sprites/spr_cc_background_temp3/spr_cc_background_temp3.yy",},},

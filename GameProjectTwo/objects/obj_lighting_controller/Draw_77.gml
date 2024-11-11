@@ -1,3 +1,4 @@
+shader_set(sh_desaturated);
 draw_surface(application_surface, 0, 0);
 
 draw_surface_stretched(light_surface, 0, 0, window_get_width(), window_get_height());
@@ -13,3 +14,5 @@ with (obj_enemy) {
 		draw_sprite_ext(spr_enemy_shrouded_temp, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 	}
 }
+
+shader_reset();
