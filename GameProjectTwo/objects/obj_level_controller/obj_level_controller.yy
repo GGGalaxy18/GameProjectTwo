@@ -33,7 +33,7 @@
         "6000",
         "8000",
       ],"multiselect":true,"name":"level_breakpoints","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2000, 4000, 6000, 8000","varType":6,},
-    {"$GMObjectProperty":"v1","%Name":"base_camera_scroll","filters":[],"listItems":[],"multiselect":false,"name":"base_camera_scroll","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"base_camera_scroll","filters":[],"listItems":[],"multiselect":false,"name":"base_camera_scroll","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"default_enemy_breakdown","filters":[],"listItems":[
         "4",
         "5",
