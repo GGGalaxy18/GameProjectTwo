@@ -3,6 +3,9 @@ base_depth = depth;
 image_xscale = 2.5;
 image_yscale = 2.5;
 
+x = camera_get_view_x(view_camera[0]) + view_wport + random_range(100, 800);
+y = random_range(416, room_height);
+
 state = ENEMYSTATE.SHROUDED;
 
 // foot hitbox
