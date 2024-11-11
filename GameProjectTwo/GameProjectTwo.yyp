@@ -49,6 +49,7 @@
     {"id":{"name":"obj_dialog_entry","path":"objects/obj_dialog_entry/obj_dialog_entry.yy",},},
     {"id":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_flying_enemy","path":"objects/obj_flying_enemy/obj_flying_enemy.yy",},},
     {"id":{"name":"obj_foot_hitbox","path":"objects/obj_foot_hitbox/obj_foot_hitbox.yy",},},
     {"id":{"name":"obj_grenade","path":"objects/obj_grenade/obj_grenade.yy",},},
     {"id":{"name":"obj_level_controller","path":"objects/obj_level_controller/obj_level_controller.yy",},},

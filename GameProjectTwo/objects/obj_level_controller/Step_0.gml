@@ -22,7 +22,9 @@ if enemy_spawn_timer < enemy_spawn_time {
 		break;
 	
 		case 1:
-		// TODO
+		if enemies_killed[breakpoint_index][$ "flying"] + instance_number(obj_flying_enemy) < default_enemy_breakdown[breakpoint_index] {
+			instance_create_layer(x, y, "Instances", obj_flying_enemy);
+		}
 		break;
 	}
 }
