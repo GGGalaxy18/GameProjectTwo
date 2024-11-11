@@ -4,7 +4,7 @@ function scr_playerstate_shoot() {
 		direction = point_direction(0, 0, xdir * hmove_speed, ydir * vmove_speed);	// Sets direction of player
 		x += xdir * hmove_speed;
 		y += ydir * vmove_speed;
-		x = clamp(x, 16, room_width - 16);
+		x = clamp(x, camera_get_view_x(view_camera[0]) + 16, camera_get_view_x(view_camera[0]) + view_wport - 16);
 		y = clamp(y, 416, room_height);
 		
 		if (sprint) {
