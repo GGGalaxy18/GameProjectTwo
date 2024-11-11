@@ -5,12 +5,16 @@ var _mouse_y = device_mouse_y_to_gui(0);
 if show_options {
 		
 } else if show_controls {
-		
+	if (controls_button_boxes[$ "back"][0] < _mouse_x and _mouse_x < controls_button_boxes[$ "back"][2]) {
+		if (controls_button_boxes[$ "back"][1] < _mouse_y and _mouse_y < controls_button_boxes[$ "back"][3]) {
+			back("controls");
+		}
+	}
 } else {
 	// In start button
 	if (menu_button_boxes[$ "resume"][0] < _mouse_x and _mouse_x < menu_button_boxes[$ "resume"][2]) {
 		if (menu_button_boxes[$ "resume"][1] < _mouse_y and _mouse_y < menu_button_boxes[$ "resume"][3]) {
-			start();
+			resume();
 		}
 	}
 

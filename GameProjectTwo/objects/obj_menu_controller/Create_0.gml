@@ -24,7 +24,7 @@ resume = function() {
 	show_menu = false;
 }
 options = function() {
-	show_options = true;
+	//show_options = true;
 	show_debug_message("options pressed");
 }
 controls = function() {
@@ -35,4 +35,16 @@ exit_level = function() {
 }
 quit = function() {
 	game_end(0);
+}
+
+controls_button_boxes = {
+	"back": [0, 0, 0, 0]
+}
+
+back = function(_toggle_menu) {
+	if _toggle_menu == "options" {
+		show_options = false;
+	} else if _toggle_menu == "controls" {
+		show_controls = false;
+	}
 }
