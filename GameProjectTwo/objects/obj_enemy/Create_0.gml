@@ -16,6 +16,12 @@ switch _spawn_left_right {
 	break;
 }
 y = random_range(416, room_height);
+var _spr_index = sprite_index;
+sprite_index = spr_foot_hitbox;
+while place_meeting(x, y, obj_foot_hitbox) {
+	y = random_range(416, room_height);
+}
+sprite_index = _spr_index;
 
 state = ENEMYSTATE.SHROUDED;
 

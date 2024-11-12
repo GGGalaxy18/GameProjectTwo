@@ -84,6 +84,8 @@
     {"id":{"name":"spr_enemy_shrouded_temp","path":"sprites/spr_enemy_shrouded_temp/spr_enemy_shrouded_temp.yy",},},
     {"id":{"name":"spr_enemy_temp","path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",},},
     {"id":{"name":"spr_flare_INPROGRESS","path":"sprites/spr_flare_INPROGRESS/spr_flare_INPROGRESS.yy",},},
+    {"id":{"name":"spr_flying_enemy_shrouded_temp","path":"sprites/spr_flying_enemy_shrouded_temp/spr_flying_enemy_shrouded_temp.yy",},},
+    {"id":{"name":"spr_flying_enemy_temp","path":"sprites/spr_flying_enemy_temp/spr_flying_enemy_temp.yy",},},
     {"id":{"name":"spr_foot_hitbox","path":"sprites/spr_foot_hitbox/spr_foot_hitbox.yy",},},
     {"id":{"name":"spr_foreground_temp","path":"sprites/spr_foreground_temp/spr_foreground_temp.yy",},},
     {"id":{"name":"spr_grass_temp","path":"sprites/spr_grass_temp/spr_grass_temp.yy",},},

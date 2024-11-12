@@ -11,3 +11,11 @@ switch (state) {
 
 // Depth Management
 depth = base_depth - 1;
+
+// Used for debugging issues with overlapping enemy spawns
+if !obj_level_controller.is_scrolling {
+	if ev_outside_view0 {
+		x = clamp(x, camera_get_view_x(view_camera[0]), camera_get_view_x(view_camera[0]) + view_wport);
+		y = clamp(y, camera_get_view_y(view_camera[0]), camera_get_view_y(view_camera[0]) + view_hport);
+	}
+}
