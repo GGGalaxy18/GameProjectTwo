@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_temp",
-    "path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",
+    "name":"spr_flying_enemy_temp",
+    "path":"sprites/spr_flying_enemy_temp/spr_flying_enemy_temp.yy",
   },
   "spriteMaskId":null,
   "visible":true,
