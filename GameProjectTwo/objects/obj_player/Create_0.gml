@@ -57,8 +57,8 @@ fire_rate = {
 bullet_damage = {
 	"pistol": 10,
 	"shotgun": 5,
-	"smg": 10,
-	"rifle": 15,
+	"smg": 5,
+	"rifle": 7,
 	"sniper": 50
 };
 reload_speed = {

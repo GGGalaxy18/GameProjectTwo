@@ -157,7 +157,11 @@ function scr_playerstate_shoot() {
 			player_shot = true;
 		}
 		current_magazine--;
-	} 
+	} else if current_magazine == 0 and mouse_check_button_pressed(mb_left) {
+		player_shot = false;
+		state = PLAYERSTATE.RELOAD;
+		scr_playerstate_reload();
+	}
 	#endregion
 	
 	shoot_timer++;
@@ -173,6 +177,7 @@ function scr_playerstate_shoot() {
 	
 	// Switch to reload state
 	if (reload and current_magazine < max_magazine[$ equipped_gun]) {
+		player_shot = false;
 		state = PLAYERSTATE.RELOAD;
 		scr_playerstate_reload();
 	}

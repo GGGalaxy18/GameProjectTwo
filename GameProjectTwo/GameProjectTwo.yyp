@@ -71,6 +71,7 @@
     {"id":{"name":"scr_enemystate_revealed","path":"scripts/scr_enemystate_revealed/scr_enemystate_revealed.yy",},},
     {"id":{"name":"scr_enemystate_shrouded","path":"scripts/scr_enemystate_shrouded/scr_enemystate_shrouded.yy",},},
     {"id":{"name":"scr_foreground_manager","path":"scripts/scr_foreground_manager/scr_foreground_manager.yy",},},
+    {"id":{"name":"scr_grenade_arc","path":"scripts/scr_grenade_arc/scr_grenade_arc.yy",},},
     {"id":{"name":"scr_gun_management","path":"scripts/scr_gun_management/scr_gun_management.yy",},},
     {"id":{"name":"scr_hit","path":"scripts/scr_hit/scr_hit.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},

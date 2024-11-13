@@ -9,10 +9,9 @@ if !obj_menu_controller.show_menu {
 	draw_set_color(-1);
 	#endregion
 	
-	#region
-//Sprint bar
-draw_sprite_ext(spr_stamina_bar,0,30,25,max(0,stamina/max_stamina),1,0,c_ltgray,1);
-#endregion
+	#region sprint bar
+	draw_sprite_ext(spr_stamina_bar,0,30,25,max(0,stamina/max_stamina),1,0,c_ltgray,1);
+	#endregion
 	
 	#region health vignette
 	draw_set_alpha(.5 - health/max_health*.5);
