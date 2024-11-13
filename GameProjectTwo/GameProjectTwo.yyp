@@ -91,6 +91,7 @@
     {"id":{"name":"spr_grass_temp","path":"sprites/spr_grass_temp/spr_grass_temp.yy",},},
     {"id":{"name":"spr_grenade","path":"sprites/spr_grenade/spr_grenade.yy",},},
     {"id":{"name":"spr_health_bar","path":"sprites/spr_health_bar/spr_health_bar.yy",},},
+    {"id":{"name":"spr_health_vignette","path":"sprites/spr_health_vignette/spr_health_vignette.yy",},},
     {"id":{"name":"spr_light_bullet","path":"sprites/spr_light_bullet/spr_light_bullet.yy",},},
     {"id":{"name":"spr_light_pix","path":"sprites/spr_light_pix/spr_light_pix.yy",},},
     {"id":{"name":"spr_light","path":"sprites/spr_light/spr_light.yy",},},

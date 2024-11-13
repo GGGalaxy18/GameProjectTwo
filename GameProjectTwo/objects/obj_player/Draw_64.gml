@@ -9,6 +9,12 @@ if !obj_menu_controller.show_menu {
 	draw_set_color(-1);
 	#endregion
 	
+	#region health vignette
+	draw_set_alpha(.5 - health/max_health*.5);
+	draw_sprite(spr_health_vignette, 0, 0, 0);
+	draw_set_alpha(1);
+	#endregion
+	
 	shader_set(sh_desaturated);
 	#region reload gui (temp and should be replaced later)
 		draw_text(25, window_get_height() - 50, string(current_magazine) + " / " + string(max_magazine[$ equipped_gun]));
