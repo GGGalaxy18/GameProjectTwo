@@ -26,5 +26,11 @@ switch (state) {
 // Depth Management
 depth = base_depth - 1;
 
+// DELETE LATER
+if keyboard_check(ord("1")) change_gun("pistol");
+if keyboard_check(ord("2")) change_gun("shotgun");
+if keyboard_check(ord("3")) change_gun("smg");
+if keyboard_check(ord("4")) change_gun("rifle");
+if keyboard_check(ord("5")) change_gun("sniper");
 
 
