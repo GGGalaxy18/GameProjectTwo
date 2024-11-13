@@ -53,6 +53,8 @@ if _show_health {
 }
 #endregion
 
-#region TEMP SPRINT DISPLAY
+// Not needed anymore
+/* #region TEMP SPRINT DISPLAY
 draw_text(x, y - sprite_height, string(stamina) + " / " + string(max_stamina));
-#endregion
+#endregion*/
+
