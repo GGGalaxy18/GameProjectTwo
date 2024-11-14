@@ -37,11 +37,33 @@ function scr_enemystate_attack() {
 		}
 		
 		if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
-			state = ENEMYSTATE.SHROUDED;
-			scr_enemystate_shrouded();
-		} else {
+			var _not_in_flare = true;
+			if instance_exists(obj_flare) {
+				for (var _i=0; _i<instance_number(obj_flare); _i++) {
+					var _flare = instance_find(obj_flare, _i);
+					if point_distance(x, y - sprite_height/2, _flare.x, _flare.y) < .54 * light_radius {
+						_not_in_flare = false;
+					}
+				}
+			}
+			if _not_in_flare {
+				state = ENEMYSTATE.SHROUDED;
+				scr_enemystate_shrouded();
+			}
+		}
+		
+		
+		if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) < light_radius {
 			state = ENEMYSTATE.REVEALED;
 			scr_enemystate_revealed()
+		} else if instance_exists(obj_flare) {
+			for (var _i=0; _i<instance_number(obj_flare); _i++) {
+				var _flare = instance_find(obj_flare, _i);
+				if point_distance(x, y - sprite_height/2, _flare.x, _flare.y) < .54 * light_radius {
+					state = ENEMYSTATE.REVEALED;
+					scr_enemystate_revealed()
+				}
+			}
 		}
 	}
 	#endregion

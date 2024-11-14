@@ -42,13 +42,20 @@ if (instance_exists(obj_player)) {
 	}
 }
 #endregion
+
+#region flare light
+with (obj_flare) {
+	var _scale = .6;
+	draw_sprite_ext(spr_light_pix, 0, x, y - 30, _scale, _scale, 0, c_white, 1);
+}
+#endregion
+
+#region mouse light
 if (room == rm_title_screen) {
 	var _light_sprite = spr_light_pix;
 	var _scale = .3;
 	draw_sprite_ext(_light_sprite, 0, mouse_x, mouse_y, _scale, _scale, 0, c_white, 1);
 }
-#region mouse light
-
 #endregion
 
 gpu_set_blendmode(bm_normal);
