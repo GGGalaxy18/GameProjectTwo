@@ -37,4 +37,3 @@ hit_timer = 0;
 
 // attack state vars
 attack_timer = 0;
-attack_cooldown = 60;

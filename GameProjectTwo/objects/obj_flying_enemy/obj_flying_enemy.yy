@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obj_flying_enemy",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"propertyId":{"name":"attack_cooldown","path":"objects/obj_enemy/obj_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
+  ],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
