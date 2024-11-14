@@ -33,13 +33,17 @@ if !obj_menu_controller.show_menu {
 	
 	draw_text(80,687, string(max_magazine[$ equipped_gun]));
 	draw_set_font(-1);
-#endregion
+	#endregion
 
 	#region grenata gui
-draw_sprite(spr_grenade_icon,0,130,645)
-draw_sprite(spr_grenade_icon,0,160,675)
-draw_sprite(spr_grenade_icon,0,130,705)
-#endregion
+	var _grenade_positions = [[130, 705], [160, 675], [130, 645]];
+	for (var _i=0; _i<cur_grenades; _i++) {
+		draw_sprite(spr_grenade_icon, 0, _grenade_positions[_i][0], _grenade_positions[_i][1]);
+	}
+	for (var _i=cur_grenades; _i<max_grenades; _i++) {
+		draw_sprite(spr_grenade_icon, 1, _grenade_positions[_i][0], _grenade_positions[_i][1]);
+	}
+	#endregion
 	shader_reset();
 }
 

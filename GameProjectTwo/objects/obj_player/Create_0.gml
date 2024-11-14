@@ -84,4 +84,6 @@ sprint_consumption = 4;
 max_grenades = 3
 // will be made dynamic later
 cur_grenades = 3
+grenade_timer = 30;
+
 

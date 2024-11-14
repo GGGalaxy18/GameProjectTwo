@@ -1,7 +1,7 @@
-function hit_enemy(_enemy) {
+function hit_enemy(_enemy, _dmg) {
 	with (_enemy) {
 		// TODO: set direction based on player hit
-		hp -= other.bullet_damage[$ other.equipped_gun];
+		hp -= _dmg;
 		
 		if hp > 0 {
 			state = ENEMYSTATE.HIT;

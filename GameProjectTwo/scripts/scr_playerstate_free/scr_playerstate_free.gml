@@ -25,6 +25,14 @@ function scr_playerstate_free() {
 	recharge_delay_timer++;
 	#endregion
 	// TODO: dodge/jump
+	#region Throw grenade
+	if grenade and grenade_timer > 30 and cur_grenades > 0 {
+		instance_create_layer(obj_player.x + 25, (obj_player.y - obj_player.sprite_height/2) - 50, "Instances", obj_grenade);
+		grenade_timer = 0;
+		cur_grenades--;
+	}
+	grenade_timer++;
+	#endregion
 	
 	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {

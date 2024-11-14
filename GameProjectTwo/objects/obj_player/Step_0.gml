@@ -7,6 +7,8 @@ down = keyboard_check(vk_down) or keyboard_check(ord("S"));
 sprint = keyboard_check(vk_shift);
 //dash = keyboard_check_pressed(vk_space);
 shoot = mouse_check_button(mb_left);
+grenade = mouse_check_button_pressed(mb_right) or keyboard_check_pressed(ord("G"));
+flare = keyboard_check_pressed(ord("F"));
 reload = keyboard_check_pressed(ord("R"));
 
 // Ensures movement in 8 directions at a set speed (diagonal is faster)

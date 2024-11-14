@@ -67,7 +67,7 @@ function scr_playerstate_shoot() {
 			while (_range_increment < bullet_range.pistol) {
 				var _target = collision_line(_x, _y, _x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
 				if _target {
-					hit_enemy(_target);
+					hit_enemy(_target, bullet_damage.pistol);
 					draw_bullets = true;
 					bullets = [[_x, _y, _x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 					break;
@@ -92,7 +92,7 @@ function scr_playerstate_shoot() {
 					_y2 = _y + lengthdir_y(_range_increment, _bullet_direction - (_bullet_spread/_bullet_per_shell * _i));
 					var _target = collision_line(x, _y, _x2, _y2, obj_enemy, true, true);
 					if _target {
-						hit_enemy(_target);
+						hit_enemy(_target, bullet_damage.shotgun);
 						draw_bullets = true;
 						array_push(bullets, [x, _y, _x2, _y2]);
 						break;
@@ -111,7 +111,7 @@ function scr_playerstate_shoot() {
 			while (_range_increment < bullet_range.smg) {
 				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
 				if _target {
-					hit_enemy(_target);
+					hit_enemy(_target, bullet_damage.smg);
 					draw_bullets = true;
 					bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 					break;
@@ -129,7 +129,7 @@ function scr_playerstate_shoot() {
 			while (_range_increment < bullet_range.rifle) {
 				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
 				if _target {
-					hit_enemy(_target);
+					hit_enemy(_target, bullet_damage.rifle);
 					draw_bullets = true;
 					bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 					break;
@@ -148,7 +148,7 @@ function scr_playerstate_shoot() {
 			while (_range_increment < bullet_range.sniper) {
 				var _target = collision_line(x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction), obj_enemy, true, true);
 				if _target and not array_contains(_hit_enemies, _target) {
-					hit_enemy(_target);
+					hit_enemy(_target, bullet_damage.sniper);
 					array_push(_hit_enemies, _target);
 				} else { _range_increment += 10; }
 			}

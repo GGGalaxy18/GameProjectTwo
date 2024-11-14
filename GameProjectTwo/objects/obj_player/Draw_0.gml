@@ -27,6 +27,12 @@ if (draw_bullets) {
 		
 		// save bullet info for lighting
 		array_push(drawn_bullets, [_x + _len_fracx * 2, _y + _len_fracy * 2, (_len + 60) / sprite_get_width(spr_light_bullet), _dir]);
+		
+		// check for any crates hit by bullets
+		var _crate = collision_line(bullets[_i][0], bullets[_i][1], bullets[_i][2], bullets[_i][3], obj_crate_temp, true, true);
+		if _crate {
+			_crate.open = true;
+		}
 	}
 	if bullet_timer > min(_bullet_timer_max, fire_rate[$ equipped_gun]) {
 		bullet_timer = 0;
