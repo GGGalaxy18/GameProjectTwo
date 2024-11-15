@@ -48,11 +48,11 @@ bullet_range = {
 	"sniper": 1500
 };
 fire_rate = {
-	"pistol": 5,
+	"pistol": 10,
 	"shotgun": 30,
-	"smg": 2,
-	"rifle": 10/3,
-	"sniper": 30
+	"smg": 5,
+	"rifle": 20,
+	"sniper": 45
 };
 bullet_damage = {
 	"pistol": 10,

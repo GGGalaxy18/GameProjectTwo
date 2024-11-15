@@ -11,7 +11,7 @@ enemies_killed = [{ "default": 0,
 					
 breakpoint_index = 0;
 enemy_spawn_timer = 0;
-enemy_spawn_time = 30;
+enemy_spawn_time = 60;
 
 level_breakpoints = [];
 default_enemy_breakdown = [];

@@ -12,7 +12,7 @@ if enemy_spawn_timer < enemy_spawn_time {
 	enemy_spawn_timer++;
 } else {
 	enemy_spawn_timer = 0;
-	enemy_spawn_time = irandom_range(15, 45);
+	enemy_spawn_time = irandom_range(30, 90);
 	var _enemy_type = irandom(1);
 	if flying_enemy_breakdown[breakpoint_index] == 0 and _enemy_type == 1 { _enemy_type = 0; }
 	switch _enemy_type {
