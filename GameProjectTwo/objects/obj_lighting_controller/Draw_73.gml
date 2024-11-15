@@ -50,6 +50,13 @@ with (obj_flare) {
 }
 #endregion
 
+#region fire grenade light
+with (obj_temp_explosion) {
+	var _scale = 1.5;
+	draw_sprite_ext(spr_light_pix, 0, x, y - 200, _scale, _scale, 0, c_white, 1);
+}
+#endregion
+
 #region mouse light
 if (room == rm_title_screen) {
 	var _light_sprite = spr_light_pix;

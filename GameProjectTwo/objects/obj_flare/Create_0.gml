@@ -5,7 +5,7 @@ fly_timer = 0;
 total_fly_time = 45;
 
 flare_timer = 0;
-total_flare_time = 120
+total_flare_time = 240
 
 init_y = y;
 init_x = x;

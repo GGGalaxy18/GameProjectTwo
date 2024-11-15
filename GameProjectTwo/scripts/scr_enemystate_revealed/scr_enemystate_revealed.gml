@@ -27,20 +27,9 @@ function scr_enemystate_revealed() {
 		#endregion
 	
 		#region switch states
-		if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
-			var _not_in_flare = true;
-			if instance_exists(obj_flare) {
-				for (var _i=0; _i<instance_number(obj_flare); _i++) {
-					var _flare = instance_find(obj_flare, _i);
-					if point_distance(x, y - sprite_height/2, _flare.x, _flare.y) < flare_radius_multiplier * light_radius {
-						_not_in_flare = false;
-					}
-				}
-			}
-			if _not_in_flare {
-				state = ENEMYSTATE.SHROUDED;
-				scr_enemystate_shrouded();
-			}
+		if !check_in_light() {
+			state = ENEMYSTATE.SHROUDED;
+			scr_enemystate_shrouded();
 		}
 	
 		if alarm_get(0) <= 0 and point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) < attack_radius {
@@ -83,20 +72,9 @@ function scr_enemystate_revealed() {
 		#endregion
 	
 		#region switch states
-		if point_distance(x, y - sprite_height/2, obj_player.x, obj_player.y - obj_player.sprite_height/2) >= light_radius {
-			var _not_in_flare = true;
-			if instance_exists(obj_flare) {
-				for (var _i=0; _i<instance_number(obj_flare); _i++) {
-					var _flare = instance_find(obj_flare, _i);
-					if point_distance(x, y - sprite_height/2, _flare.x, _flare.y) < flare_radius_multiplier * light_radius {
-						_not_in_flare = false;
-					}
-				}
-			}
-			if _not_in_flare {
-				state = ENEMYSTATE.SHROUDED;
-				scr_enemystate_shrouded();
-			}
+		if !check_in_light() {
+			state = ENEMYSTATE.SHROUDED;
+			scr_enemystate_shrouded();
 		}
 		
 		if alarm_get(0) <= 0 {

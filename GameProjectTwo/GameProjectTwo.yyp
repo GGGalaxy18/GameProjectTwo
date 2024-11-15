@@ -79,6 +79,7 @@
     {"id":{"name":"scr_grenade_arc","path":"scripts/scr_grenade_arc/scr_grenade_arc.yy",},},
     {"id":{"name":"scr_gun_management","path":"scripts/scr_gun_management/scr_gun_management.yy",},},
     {"id":{"name":"scr_hit","path":"scripts/scr_hit/scr_hit.yy",},},
+    {"id":{"name":"scr_in_light","path":"scripts/scr_in_light/scr_in_light.yy",},},
     {"id":{"name":"scr_macros","path":"scripts/scr_macros/scr_macros.yy",},},
     {"id":{"name":"scr_playerstate_free","path":"scripts/scr_playerstate_free/scr_playerstate_free.yy",},},
     {"id":{"name":"scr_playerstate_reload","path":"scripts/scr_playerstate_reload/scr_playerstate_reload.yy",},},

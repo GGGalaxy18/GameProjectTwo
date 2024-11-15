@@ -1,6 +1,9 @@
 #region camera movement
-if camera_get_view_x(view_camera[0]) <= current_breakpoint {
-	camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + base_camera_scroll, camera_get_view_y(view_camera[0]));
+var _cam_movement_offset = 300;
+if obj_player.x > camera_get_view_x(view_camera[0]) + view_wport - _cam_movement_offset {
+	var _cam_scroll = obj_player.x - (camera_get_view_x(view_camera[0]) + view_wport - _cam_movement_offset);
+	show_debug_message(_cam_scroll);
+	camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + _cam_scroll, camera_get_view_y(view_camera[0]));
 	is_scrolling = true;
 } else is_scrolling = false;
 

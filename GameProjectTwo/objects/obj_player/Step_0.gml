@@ -35,4 +35,8 @@ if keyboard_check(ord("3")) change_gun("smg");
 if keyboard_check(ord("4")) change_gun("rifle");
 if keyboard_check(ord("5")) change_gun("sniper");
 
-if flare { instance_create_layer(obj_player.x + 25, (obj_player.y - obj_player.sprite_height/2) - 50, "Instances", obj_flare); }
+if flare and stamina >= flare_consumption {
+	stamina -= flare_consumption;
+	recharge_delay_timer = 0;
+	instance_create_layer(obj_player.x + 25, (obj_player.y - obj_player.sprite_height/2) - 50, "Instances", obj_flare);
+}

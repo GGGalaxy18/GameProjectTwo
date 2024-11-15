@@ -12,6 +12,8 @@ sprint = noone;
 //dash = noone;
 //melee_attack = noone;
 shoot = noone;
+grenade = noone;
+flare = noone;
 reload = noone;
 
 state = PLAYERSTATE.FREE;
@@ -79,6 +81,9 @@ stamina_recharge = 2;
 recharge_delay = 60;
 recharge_delay_timer = 0;
 sprint_consumption = 4;
+
+// flare
+flare_consumption = 100;
 
 // grenades
 max_grenades = 3

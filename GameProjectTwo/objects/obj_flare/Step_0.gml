@@ -7,5 +7,7 @@ if fly_timer < total_fly_time {
 	image_angle += 2;
 } else {
 	flare_timer++;
-	
+	if flare_timer > total_flare_time {
+		instance_destroy();
+	}
 }
