@@ -101,6 +101,7 @@
     {"id":{"name":"spr_crate_temp","path":"sprites/spr_crate_temp/spr_crate_temp.yy",},},
     {"id":{"name":"spr_enemy_shrouded_temp","path":"sprites/spr_enemy_shrouded_temp/spr_enemy_shrouded_temp.yy",},},
     {"id":{"name":"spr_enemy_temp","path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",},},
+    {"id":{"name":"spr_finalboss","path":"sprites/spr_finalboss/spr_finalboss.yy",},},
     {"id":{"name":"spr_flare_INPROGRESS","path":"sprites/spr_flare_INPROGRESS/spr_flare_INPROGRESS.yy",},},
     {"id":{"name":"spr_flare","path":"sprites/spr_flare/spr_flare.yy",},},
     {"id":{"name":"spr_flying_enemy_shrouded_temp","path":"sprites/spr_flying_enemy_shrouded_temp/spr_flying_enemy_shrouded_temp.yy",},},
