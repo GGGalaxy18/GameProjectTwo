@@ -7,6 +7,10 @@ enemies_killed = [{ "default": 0,
 				  { "default": 0,
 					"flying": 0 },
 				  { "default": 0,
+					"flying": 0 },
+				  { "default": 0,
+					"flying": 0 },
+				  { "default": 0,
 					"flying": 0 }];
 					
 breakpoint_index = 0;
@@ -56,4 +60,5 @@ if breakpoint6 != "noone" {
 					
 current_breakpoint = level_breakpoints[0];
 
-is_scrolling = true;
+cam_scroll = 0;
+is_scrolling = false;

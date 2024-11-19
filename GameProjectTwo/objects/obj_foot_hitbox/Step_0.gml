@@ -6,8 +6,8 @@ if (instance_exists(instance_to_follow)) {
 				mp_potential_step(obj_player.x, obj_player.y, adjusted_speed, false);
 		} 
 		else if (instance_to_follow.object_index == obj_flying_enemy) {
-			var _scroll_shift = obj_level_controller.base_camera_scroll;
-			if !obj_level_controller.is_scrolling { _scroll_shift = 0; }
+			var _scroll_shift = obj_level_controller.cam_scroll;
+			if !obj_level_controller.is_scrolling { _scroll_shift = 0; } // redundant but I'm keeping it
 			path_shift(fly_path, _scroll_shift, 0);
 			if get_to_path {
 				var _closest_path_index = 0;
