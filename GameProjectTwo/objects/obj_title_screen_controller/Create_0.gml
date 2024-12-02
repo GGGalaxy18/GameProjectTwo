@@ -14,6 +14,7 @@ button_boxes = {
 
 start = function() {
 	room_goto_next();
+	audio_stop_all()
 }
 options = function() {
 	show_debug_message("options pressed");
@@ -21,3 +22,4 @@ options = function() {
 quit = function() {
 	game_end(0);
 }
+

@@ -31,6 +31,7 @@
     {"name":"inst_29A1DC91","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_4EE5E37","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_7C31BE4F","path":"rooms/rm_main/rm_main.yy",},
+    {"name":"inst_7C1EB202","path":"rooms/rm_main/rm_main.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -61,6 +62,7 @@
         {"$GMRInstance":"v1","%Name":"inst_29A1DC91","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_29A1DC91","objectId":{"name":"obj_crate_temp","path":"objects/obj_crate_temp/obj_crate_temp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":9568.0,"y":640.0,},
         {"$GMRInstance":"v1","%Name":"inst_4EE5E37","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4EE5E37","objectId":{"name":"obj_crate_temp","path":"objects/obj_crate_temp/obj_crate_temp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":9600.0,"y":672.0,},
         {"$GMRInstance":"v1","%Name":"inst_7C31BE4F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C31BE4F","objectId":{"name":"obj_crate_temp","path":"objects/obj_crate_temp/obj_crate_temp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":10208.0,"y":512.0,},
+        {"$GMRInstance":"v1","%Name":"inst_7C1EB202","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C1EB202","objectId":{"name":"obj_level_music","path":"objects/obj_level_music/obj_level_music.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background1","properties":[
         {"name":"g_Intensity","type":0,"value":"0.75",},

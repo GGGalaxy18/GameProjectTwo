@@ -17,6 +17,7 @@
     {"name":"inst_183B04A9","path":"rooms/rm_title_screen/rm_title_screen.yy",},
     {"name":"inst_7A4496B","path":"rooms/rm_title_screen/rm_title_screen.yy",},
     {"name":"inst_3018049B","path":"rooms/rm_title_screen/rm_title_screen.yy",},
+    {"name":"inst_6DB5B04F","path":"rooms/rm_title_screen/rm_title_screen.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -33,6 +34,7 @@
         {"$GMRInstance":"v1","%Name":"inst_183B04A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_183B04A9","objectId":{"name":"obj_title_enemy","path":"objects/obj_title_enemy/obj_title_enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":576.0,},
         {"$GMRInstance":"v1","%Name":"inst_7A4496B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A4496B","objectId":{"name":"obj_title_enemy","path":"objects/obj_title_enemy/obj_title_enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":448.0,},
         {"$GMRInstance":"v1","%Name":"inst_3018049B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3018049B","objectId":{"name":"obj_title_enemy","path":"objects/obj_title_enemy/obj_title_enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2176.0,"y":640.0,},
+        {"$GMRInstance":"v1","%Name":"inst_6DB5B04F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6DB5B04F","objectId":{"name":"obj_title_music","path":"objects/obj_title_music/obj_title_music.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2688.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background1","properties":[
         {"name":"g_Intensity","type":0,"value":"0.75",},
