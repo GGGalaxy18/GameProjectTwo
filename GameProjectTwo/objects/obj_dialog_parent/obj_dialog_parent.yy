@@ -32,6 +32,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"text_wait","filters":[],"listItems":[],"multiselect":false,"name":"text_wait","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"dialog_end","filters":[],"listItems":[],"multiselect":false,"name":"dialog_end","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"keyboard_check_released(key_next)","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"key_next","filters":[],"listItems":[],"multiselect":false,"name":"key_next","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_anykey","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

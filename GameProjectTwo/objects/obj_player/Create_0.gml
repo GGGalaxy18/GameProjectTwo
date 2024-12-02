@@ -2,6 +2,8 @@
 xdir = 0;
 ydir = 0;
 base_depth = depth;
+image_xscale = .22;
+image_yscale = .22;
 
 // control declarations
 left = noone;

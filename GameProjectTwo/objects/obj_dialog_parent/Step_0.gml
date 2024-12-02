@@ -12,8 +12,15 @@ if (not showing_dialog) {
 	can_proceed = false;
 	alarm[0] = text_wait;
 } else {
-	if (can_proceed and keyboard_check_released(key_next)) {
-		showing_dialog = false;
-		alpha = 0;
+	if count() == 1 {
+		if can_proceed and dialog_end {
+			showing_dialog = false;
+			alpha = 0;
+		}
+	} else {
+		if (can_proceed and keyboard_check_released(key_next)) {
+			showing_dialog = false;
+			alpha = 0;
+		}
 	}
 }

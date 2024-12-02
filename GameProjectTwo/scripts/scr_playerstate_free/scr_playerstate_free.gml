@@ -40,6 +40,7 @@ function scr_playerstate_free() {
 	#region Idle sprite management (W sprites are flipped)
 	if (xdir == 0) and (ydir == 0) {
 		// set E sprite
+		sprite_index = spr_player;
 		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
 		} else if (xdir > 0) {				// Facing East
@@ -50,6 +51,7 @@ function scr_playerstate_free() {
 	#region Walking sprite management (W sprites are flipped)
 	else {
 		// set E sprite
+		sprite_index = spr_playerwalking;
 		if (xdir < 0) {						// Facing West
 			image_xscale = -1 * abs(image_xscale);	// Set sprite to face left
 		} else if (xdir > 0) {				// Facing East
