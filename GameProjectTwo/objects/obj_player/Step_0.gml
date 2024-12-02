@@ -40,3 +40,4 @@ if flare and stamina >= flare_consumption {
 	recharge_delay_timer = 0;
 	instance_create_layer(obj_player.x + 25, (obj_player.y - obj_player.sprite_height/2) - 50, "Instances", obj_flare);
 }
+

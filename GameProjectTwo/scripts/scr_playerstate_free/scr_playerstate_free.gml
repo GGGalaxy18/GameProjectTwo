@@ -16,7 +16,10 @@ function scr_playerstate_free() {
 				stamina -= sprint_consumption;
 				recharge_delay_timer = 0;
 			}
-		} else { image_speed = 1; }
+		} else { image_speed = 1;
+			audio_stop_sound(snd_player_sprint)
+			
+			}
 	}
 	if recharge_delay_timer >= recharge_delay {
 		stamina += stamina_recharge;
@@ -68,4 +71,5 @@ function scr_playerstate_free() {
 		scr_playerstate_shoot();
 	}
 	#endregion
+	audio_play_sound(snd_player_sprint,98,true)
 }

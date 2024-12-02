@@ -36,4 +36,6 @@ function scr_enemystate_hit() {
 		}
 	}
 	#endregion
+	
+	audio_play_sound(snd_enemy_hurt,99,false)
 }
