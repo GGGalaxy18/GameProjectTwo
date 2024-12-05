@@ -93,4 +93,5 @@ max_grenades = 3
 cur_grenades = 3
 grenade_timer = 30;
 
-
+// cutscene
+in_cutscene = false;

@@ -7,16 +7,20 @@ function scr_playerstate_shoot() {
 		x = clamp(x, camera_get_view_x(view_camera[0]) + 16, camera_get_view_x(view_camera[0]) + view_wport - 16);
 		y = clamp(y, 416, room_height);
 		
-		if (sprint) {
-			if stamina > sprint_consumption {
-				x += sprint_additive * xdir;
-				y += sprint_additive * ydir;
-				var _speed_increase_percent = sqrt(sqr(xdir*(hmove_speed + sprint_additive)) + sqr(ydir*(vmove_speed +  sprint_additive))) / hmove_speed;
-				image_speed = _speed_increase_percent;
-				stamina -= sprint_consumption;
-				recharge_delay_timer = 0;
+		if sprint and stamina > sprint_consumption {
+			x += sprint_additive * xdir;
+			y += sprint_additive * ydir;
+			var _speed_increase_percent = sqrt(sqr(xdir*(hmove_speed + sprint_additive)) + sqr(ydir*(vmove_speed +  sprint_additive))) / hmove_speed;
+			image_speed = _speed_increase_percent;
+			stamina -= sprint_consumption;
+			recharge_delay_timer = 0;
+			if !audio_is_playing(snd_player_sprint) {
+				audio_play_sound(snd_player_sprint,98,true);
 			}
-		} else { image_speed = 1; }
+		} else {
+			image_speed = 1;
+			audio_stop_sound(snd_player_sprint);
+		}
 	}
 	if recharge_delay_timer >= recharge_delay {
 		stamina += stamina_recharge / 2;

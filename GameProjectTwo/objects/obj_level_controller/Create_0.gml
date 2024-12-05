@@ -62,3 +62,17 @@ current_breakpoint = level_breakpoints[0];
 
 cam_scroll = 0;
 is_scrolling = false;
+
+// boss
+in_boss_fight = false;
+in_boss_cutscene = false;
+cutscene_sections = {
+	"player_stop": false,
+	"shake1": false,
+	"shake2": false,
+	"shake3": false,
+	"cam_pan_right": false,
+	"throw_flare": false,
+	"roar": false,
+	"cam_pan_left": false
+}
