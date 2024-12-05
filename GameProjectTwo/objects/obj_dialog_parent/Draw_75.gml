@@ -32,8 +32,12 @@ if (showing_dialog) {
 	}
 	
 	draw_set_color(c_white);
+	if special_final_frame and count() == 0 draw_set_color(c_aqua);
 	draw_text_ext(_text_x, _text_y, current_dialog.message, 16, display_get_gui_width() - 192);
+	draw_set_color(c_white);
 	
+	draw_text_ext(display_get_gui_width() - string_width("press SPACE to continue") - (_padding*2), _height, "press SPACE to continue", 16, 256);
+
 	alpha = lerp(alpha, 1, 0.06);
 	draw_set_alpha(1);
 }

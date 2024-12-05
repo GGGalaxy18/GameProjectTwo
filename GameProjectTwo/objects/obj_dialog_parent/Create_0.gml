@@ -10,6 +10,8 @@ pop = function() { return array_shift(dialogs); };
 
 count = function() { return array_length(dialogs); };
 
+key_next = noone;
+
 showing_dialog = false;
 
 current_dialog = {};

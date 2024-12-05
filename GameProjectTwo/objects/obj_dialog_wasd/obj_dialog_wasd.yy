@@ -7,7 +7,8 @@
   "managed":true,
   "name":"obj_dialog_wasd",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"propertyId":{"name":"dialog_end","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"keyboard_check_released(vk_anykey)",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"propertyId":{"name":"checkpoint_index","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"propertyId":{"name":"special_final_frame","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
     "name":"Tutorial",

@@ -14,6 +14,7 @@ checkpoint_tasks = [{ "W": false,
 				  { "flare": false,
 					"enemy_dead": false },
 				  { "heal": false }];
+checkpoint_completed = [false, false, false, false, false, false, false];
 prev_checkpoint = 0;
 checkpoint_index = 0;
 related_dialog = [obj_dialog_wasd,		// WASD
