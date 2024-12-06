@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_bossstate_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_bossstate_start",
+  "parent":{
+    "name":"Bossstates",
+    "path":"folders/Scripts/Bossstates.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

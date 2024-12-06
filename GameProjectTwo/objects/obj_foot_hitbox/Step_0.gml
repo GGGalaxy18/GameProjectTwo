@@ -36,6 +36,11 @@ if (instance_exists(instance_to_follow)) {
 				//mp_potential_step(path_get_point_x(fly_path, path_point_index), path_get_point_y(fly_path, path_point_index), 4, false);
 			}
 		}
+		else if (instance_to_follow.object_index == obj_boss) {
+			if obj_boss.state == BOSSSTATE.START {
+				mp_potential_step(obj_player.x, obj_player.y, adjusted_speed, false);
+			}
+		}
 	} else {
 		
 	}
