@@ -27,6 +27,3 @@ if point_distance(x, y - sprite_height/2, mouse_x, mouse_y) >= light_radius {
 	else { image_xscale = abs(image_xscale); }
 	#endregion
 }
-
-// Depth Management
-depth = base_depth - 1;

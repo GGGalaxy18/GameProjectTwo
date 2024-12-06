@@ -15,6 +15,7 @@ reload = keyboard_check_pressed(ord("R"));
 xdir = right - left;
 ydir = down - up;
 
+if in_cutscene state = PLAYERSTATE.CUTSCENE;
 
 // State Machine
 switch (state) {
@@ -25,9 +26,6 @@ switch (state) {
 	case PLAYERSTATE.HIT: scr_playerstate_hit(); break;
 	case PLAYERSTATE.CUTSCENE: if !in_cutscene { state = PLAYERSTATE.FREE; } break;
 }
-
-// Depth Management
-depth = base_depth - 1;
 
 if !in_cutscene {
 	// DELETE LATER

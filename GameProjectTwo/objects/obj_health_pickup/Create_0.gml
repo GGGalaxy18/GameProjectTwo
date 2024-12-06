@@ -2,6 +2,8 @@ spread_timer = 0;
 wspread = 100;
 hspread = wspread/2;
 
+base_depth = depth;
+
 init_y = y;
 init_x = x;
 end_x = x + random_range(-wspread, wspread);

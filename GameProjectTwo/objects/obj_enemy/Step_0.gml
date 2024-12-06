@@ -9,9 +9,6 @@ switch (state) {
 	case ENEMYSTATE.HIT: scr_enemystate_hit(); break;
 }
 
-// Depth Management
-depth = base_depth - 1;
-
 // Used for debugging issues with overlapping enemy spawns
 /*
 if !obj_level_controller.is_scrolling {

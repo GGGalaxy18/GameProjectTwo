@@ -13,6 +13,11 @@ if (not showing_dialog) {
 	showing_dialog = true;
 	can_proceed = false;
 	alarm[0] = text_wait;
+} else if cutscene_dialog {		// dialog auto proceeds
+	if can_proceed {
+		showing_dialog = false;
+		alpha = 0;
+	}
 } else {
 	if count() == 0 {
 		if room == rm_tutorial {

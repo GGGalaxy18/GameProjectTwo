@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-show_debug_message("spat");
 init_y = y;
 init_x = x;
 end_y = max(416, obj_player.y);

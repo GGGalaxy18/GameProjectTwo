@@ -5,6 +5,6 @@
 event_inherited();
 
 //add to when boss shows up
-add(spr_player_profilepic_1, "NoName: The queen, the nastiest looking one");
-add(spr_player_profilepic, "The Queen: kyuy vhukv gvv yik hubft");
-add(spr_player_profilepic_1, "NoName: EW!!");
+add(spr_player_profilepic_1, "The queen, the nastiest looking one");
+add(spr_player_profilepic, "kyuy vhukv gvv yik hubft");
+add(spr_player_profilepic_1, "gross...");

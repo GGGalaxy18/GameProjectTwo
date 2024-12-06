@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_player_profilepic_1",
   "bboxMode":0,
-  "bbox_bottom":99,
-  "bbox_left":9,
-  "bbox_right":94,
+  "bbox_bottom":79,
+  "bbox_left":7,
+  "bbox_right":75,
   "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":100,
+  "height":80,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"16b51777-b27f-44f8-be78-38e41d1f162a","blendMode":0,"displayName":"default","isLocked":false,"name":"16b51777-b27f-44f8-be78-38e41d1f162a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":100,
+  "width":80,
 }

@@ -23,7 +23,7 @@
   ],
   "name":"spr_grenade",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":37,
-    "yorigin":70,
+    "yorigin":37,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_grenade",
-    "path":"sprites/spr_grenade/spr_grenade.yy",
+    "name":"spr_grenade_pickup",
+    "path":"sprites/spr_grenade_pickup/spr_grenade_pickup.yy",
   },
   "spriteMaskId":null,
   "visible":true,

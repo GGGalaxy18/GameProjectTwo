@@ -3,7 +3,7 @@ if !in_boss_fight {
 	var _cam_movement_offset = 500;
 	if obj_player.x > camera_get_view_x(view_camera[0]) + view_wport - _cam_movement_offset and camera_get_view_x(view_camera[0]) < current_breakpoint {
 		cam_scroll = min(4, obj_player.x - (camera_get_view_x(view_camera[0]) + view_wport - _cam_movement_offset));
-		camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + cam_scroll, camera_get_view_y(view_camera[0]));
+		camera_set_view_pos(view_camera[0], min(camera_get_view_x(view_camera[0]) + cam_scroll, current_breakpoint), camera_get_view_y(view_camera[0]));
 		is_scrolling = true;
 	} else { is_scrolling = false; cam_scroll = 0; }
 
@@ -51,53 +51,101 @@ if !in_boss_fight {
 	
 	#region enter boss fight (cutscene)
 	if in_boss_cutscene {
-		obj_player.in_cutscene = true;
+		if !obj_player.in_cutscene set_player_cutscene();
 		if !cutscene_sections[$ "player_stop"] {
-			alarm[0] = 30;
+			if !stopped_player { alarm[0] = 30; stopped_player = true; }
 			if alarm[0] <= 0 {
 				cutscene_sections[$ "player_stop"] = true;
 				alarm[0] = 15;	// set screenshake timer
 			}
 		} else if !cutscene_sections[$ "shake1"] {
-			if (alarm[0] > -1) {
+			show_debug_message("shake 1")
+			if (alarm[0] > 0) {
 				camera_set_view_angle(view_camera[0], -3 + random(5));
-			} else {
+			} else if !end_shake {
 				camera_set_view_angle(view_camera[0], 0);
-				alarm[1] = 30;	// gap between screenshakes
+				end_shake = true;
+				alarm[1] = 90;	// gap between screenshakes
 			}
-			if alarm[1] <= 0 {
+			if end_shake and alarm[1] <= 0 {
 				cutscene_sections[$ "shake1"] = true;
+				end_shake = false;
 				alarm[0] = 15;	// set screenshake timer
 			}
 		} else if !cutscene_sections[$ "shake2"] {
-			if (alarm[0] > -1) {
+			show_debug_message("shake 2")
+			if (alarm[0] > 0) {
 				camera_set_view_angle(view_camera[0], -3 + random(5));
-			} else {
+			} else if !end_shake {
 				camera_set_view_angle(view_camera[0], 0);
-				alarm[1] = 30;	// gap between screenshakes
+				end_shake = true;
+				alarm[1] = 90;	// gap between screenshakes
 			}
-			if alarm[1] <= 0 {
+			if end_shake and alarm[1] <= 0 {
 				cutscene_sections[$ "shake2"] = true;
+				end_shake = false;
 				alarm[0] = 15;	// set screenshake timer
+				instance_create_layer(x, y, "Instances", obj_dialog_found_boss);
 			}
 		} else if !cutscene_sections[$ "shake3"] {
-			if (alarm[0] > -1) {
+			show_debug_message("shake 3")
+			if (alarm[0] > 0) {
 				camera_set_view_angle(view_camera[0], -3 + random(5));
-			} else {
+			} else if !end_shake {
 				camera_set_view_angle(view_camera[0], 0);
-				alarm[1] = 30;	// gap between screenshakes
+				end_shake = true;
+				alarm[1] = 90;	// set delay before starting cam pan
 			}
-			if alarm[1] <= 0 {
+			if end_shake and alarm[1] <= 0 {
 				cutscene_sections[$ "shake3"] = true;
+				end_shake = false;
+				alarm[0] = 150;	// pan duration
 			}
 		} else if !cutscene_sections[$ "cam_pan_right"] {
-			show_debug_message("waiting here for a bit")
+			show_debug_message("came pan right")
+			var _pan_distance = 1000;
+			if alarm[0] > 0 {
+				camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + _pan_distance/150, camera_get_view_y(view_camera[0]));
+			} else { cutscene_sections[$ "cam_pan_right"] = true; }
 		} else if !cutscene_sections[$ "throw_flare"] {
-				
+			show_debug_message("throw flare")
+			if !flare_thrown {
+				flare_thrown = true;
+				var _flare_struct =  { cutscene_x: camera_get_view_x(view_camera[0]) + view_wport*.75, cutscene_y: 600 }
+				instance_create_layer(obj_player.x + 25, (obj_player.y - obj_player.sprite_height/2) - 50, "Instances", obj_flare, _flare_struct);
+				alarm[0] = 45;
+			}
+			if alarm[0] <= 0 {
+				instance_create_layer(camera_get_view_x(view_camera[0]) + view_wport*.75 + 20, view_hport - 110, "Instances", obj_boss);
+				cutscene_sections[$ "throw_flare"] = true;
+				alarm[0] = 60;	// roar duration
+			}
 		} else if !cutscene_sections[$ "roar"] {
-				
+			show_debug_message("roar")
+			if (alarm[0] > 0) {
+				camera_set_view_angle(view_camera[0], -3 + random(5));
+			} else if !end_shake {
+				camera_set_view_angle(view_camera[0], 0);
+				end_shake = true;
+				alarm[1] = 10;	// set delay before starting cam pan
+			}
+			if end_shake and alarm[1] <= 0 {
+				cutscene_sections[$ "roar"] = true;
+				end_shake = false;
+				alarm[0] = 60;	// pan duration
+				instance_create_layer(x, y, "Instances", obj_dialog_boss);
+			}
 		} else if !cutscene_sections[$ "cam_pan_left"] {
-				
+			show_debug_message("came pan left")
+			var _pan_distance = 1000;
+			if alarm[0] > 0 {
+				camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) - _pan_distance/60, camera_get_view_y(view_camera[0]));
+			} else {
+				cutscene_sections[$ "cam_pan_left"] = true;
+				set_player_out_cutscene();
+				in_boss_cutscene = false;
+				obj_boss.in_cutscene = false;
+			}
 		}
 	}
 	#endregion

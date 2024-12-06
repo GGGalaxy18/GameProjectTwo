@@ -6,10 +6,12 @@
   ],
   "managed":true,
   "name":"obj_dialog_boss",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_dialog_parent","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"propertyId":{"name":"cutscene_dialog","path":"objects/obj_dialog_parent/obj_dialog_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
-    "name":"Dialog",
-    "path":"folders/Objects/Dialog.yy",
+    "name":"Level 1",
+    "path":"folders/Objects/Dialog/Level 1.yy",
   },
   "parentObjectId":{
     "name":"obj_dialog_parent",
