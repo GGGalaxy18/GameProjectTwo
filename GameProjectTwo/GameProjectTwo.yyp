@@ -107,6 +107,7 @@
     {"id":{"name":"snd_level_music","path":"sounds/snd_level_music/snd_level_music.yy",},},
     {"id":{"name":"snd_player_sprint","path":"sounds/snd_player_sprint/snd_player_sprint.yy",},},
     {"id":{"name":"snd_title_music","path":"sounds/snd_title_music/snd_title_music.yy",},},
+    {"id":{"name":"obj_campfire","path":"sprites/obj_campfire/obj_campfire.yy",},},
     {"id":{"name":"spr_acid_projectile","path":"sprites/spr_acid_projectile/spr_acid_projectile.yy",},},
     {"id":{"name":"spr_acid_puddle","path":"sprites/spr_acid_puddle/spr_acid_puddle.yy",},},
     {"id":{"name":"spr_background_1","path":"sprites/spr_background_1/spr_background_1.yy",},},
