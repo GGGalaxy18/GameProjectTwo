@@ -4,6 +4,7 @@ image_xscale = 2.5;
 image_yscale = 2.5;
 
 var _spawn_left_right = irandom(3);
+if force_right_spawn { _spawn_left_right = 0; }
 switch _spawn_left_right {
 	case 0:	// right
 	x = camera_get_view_x(view_camera[0]) + view_wport + random_range(100, 800);

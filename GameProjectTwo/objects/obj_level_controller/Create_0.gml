@@ -64,8 +64,8 @@ cam_scroll = 0;
 is_scrolling = false;
 
 // boss
-in_boss_fight = true;		// change back after testing
-in_boss_cutscene = true;	// change back after testing
+in_boss_fight = false;
+in_boss_cutscene = false;
 cutscene_sections = {
 	"player_stop": false,
 	"shake1": false,
@@ -79,3 +79,7 @@ cutscene_sections = {
 stopped_player = false;
 end_shake = false;
 flare_thrown = false;
+boss_dead = false;
+
+exit_level = false;
+end_level_timer = 0;

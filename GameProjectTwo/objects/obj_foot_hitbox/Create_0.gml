@@ -1,6 +1,12 @@
 x = instance_to_follow.x;
 y = instance_to_follow.y;
 
+// player vars
+if instance_to_follow.object_index == obj_player {
+	image_xscale = 1.5;
+	image_yscale = 1.5;
+}
+
 // flying enemy vars
 if instance_to_follow.object_index == obj_flying_enemy {
 	num_points = 7;
@@ -20,3 +26,12 @@ if instance_to_follow.object_index == obj_flying_enemy {
 	get_to_path = true;
 	path_point_index = 0;
 }
+
+// boss vars
+fly_timer = 0;
+total_fly_time = 60;
+
+init_y = y;
+init_x = x;
+end_y = random_range(416, view_hport);
+end_x = x - random_range(50, 200);

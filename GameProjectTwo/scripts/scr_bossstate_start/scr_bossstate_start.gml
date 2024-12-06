@@ -11,7 +11,7 @@ function scr_bossstate_start() {
 	
 	#region movement
 	// Foot box is moved and enemy moves with it
-	var _base_speed = 2;
+	var _base_speed = 4;
 	var _adjusted_speed = _base_speed / 4 * cos(pi * direction/90) + 3 * _base_speed / 4;
 	for (var _i=0; _i<instance_number(obj_foot_hitbox); _i++) {
 		var _footbox = instance_find(obj_foot_hitbox, _i);
@@ -26,7 +26,7 @@ function scr_bossstate_start() {
 	#endregion
 	
 	#region switch states
-	if x < camera_get_view_x(view_camera[0]) + view_hport {
+	if x < camera_get_view_x(view_camera[0]) + view_wport {
 		state = BOSSSTATE.PHASE1;
 		scr_bossstate_phase1();
 	}

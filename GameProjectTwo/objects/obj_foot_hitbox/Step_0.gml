@@ -37,9 +37,19 @@ if (instance_exists(instance_to_follow)) {
 			}
 		}
 		else if (instance_to_follow.object_index == obj_boss) {
-			if obj_boss.state == BOSSSTATE.START {
+			if obj_boss.state == BOSSSTATE.PHASE3 and obj_boss.smash_attack {
+				fly_timer++;
+				y = get_arc_altitude(fly_timer/total_fly_time, init_y, 60, end_y);
+				x = init_x + (end_x - init_x) * (fly_timer/total_fly_time);
+
+				if fly_timer >= total_fly_time { obj_boss.smash_attack = false; fly_timer = 0; }
+			} else {
 				mp_potential_step(obj_player.x, obj_player.y, adjusted_speed, false);
 			}
+		} 
+		else if (instance_to_follow.object_index == obj_player) {
+			x = obj_player.x;
+			y = obj_player.y;
 		}
 	} else {
 		

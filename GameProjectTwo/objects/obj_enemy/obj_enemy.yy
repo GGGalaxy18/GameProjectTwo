@@ -38,6 +38,7 @@
     {"$GMObjectProperty":"v1","%Name":"attack_radius","filters":[],"listItems":[],"multiselect":false,"name":"attack_radius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"200","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"attack_cooldown","filters":[],"listItems":[],"multiselect":false,"name":"attack_cooldown","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"flare_radius_multiplier","filters":[],"listItems":[],"multiselect":false,"name":"flare_radius_multiplier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".7","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"force_right_spawn","filters":[],"listItems":[],"multiselect":false,"name":"force_right_spawn","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
