@@ -26,8 +26,8 @@ switch (state) {
 	case PLAYERSTATE.HIT: scr_playerstate_hit(); break;
 	case PLAYERSTATE.CUTSCENE: if !in_cutscene { state = PLAYERSTATE.FREE; } break;
 }
-
-if !in_cutscene or state != PLAYERSTATE.DEAD {
+show_debug_message(state);
+if !in_cutscene and state != PLAYERSTATE.DEAD {
 	// DELETE LATER
 	if keyboard_check(vk_alt) and keyboard_check(ord("1")) change_gun("pistol");
 	if keyboard_check(vk_alt) and keyboard_check(ord("2")) change_gun("shotgun");
