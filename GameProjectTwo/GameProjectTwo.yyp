@@ -168,6 +168,7 @@
     {"id":{"name":"spr_light_bullet","path":"sprites/spr_light_bullet/spr_light_bullet.yy",},},
     {"id":{"name":"spr_light_pix","path":"sprites/spr_light_pix/spr_light_pix.yy",},},
     {"id":{"name":"spr_light","path":"sprites/spr_light/spr_light.yy",},},
+    {"id":{"name":"spr_map_marker","path":"sprites/spr_map_marker/spr_map_marker.yy",},},
     {"id":{"name":"spr_map","path":"sprites/spr_map/spr_map.yy",},},
     {"id":{"name":"spr_pistol_temp","path":"sprites/spr_pistol_temp/spr_pistol_temp.yy",},},
     {"id":{"name":"spr_player_profilepic","path":"sprites/spr_player_profilepic/spr_player_profilepic.yy",},},

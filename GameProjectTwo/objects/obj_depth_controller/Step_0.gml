@@ -17,6 +17,7 @@ _depth_objects = array_concat(_depth_objects, add_instances(obj_flare));
 _depth_objects = array_concat(_depth_objects, add_instances(obj_acid_puddle)); 
 _depth_objects = array_concat(_depth_objects, add_instances(obj_boss));
 _depth_objects = array_concat(_depth_objects, add_instances(obj_tent_inner));
+_depth_objects = array_concat(_depth_objects, add_instances(obj_campfire));
 
 array_sort(_depth_objects, function(_a, _b) { return _b.y - _a.y; });
 for(var _i = 0; _i < array_length(_depth_objects); _i++) {
