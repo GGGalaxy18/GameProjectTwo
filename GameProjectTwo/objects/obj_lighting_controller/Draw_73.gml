@@ -65,6 +65,12 @@ if (room == rm_title_screen) {
 }
 #endregion
 
+#region campfire light
+with (obj_campfire) {
+	var _scale = .6 + .1 * sin(current_time/1000);
+	draw_sprite_ext(spr_light_pix, 0, x, y - 30, _scale, _scale, 0, c_white, 1);
+}
+
 gpu_set_blendmode(bm_normal);
 
 surface_reset_target();
