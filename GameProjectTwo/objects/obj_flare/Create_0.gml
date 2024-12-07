@@ -19,3 +19,5 @@ if obj_player.in_cutscene {
 	end_x = cutscene_x;
 	show_debug_message("flare created")
 }
+
+audio_play_sound(snd_flare_tp, 99, false);

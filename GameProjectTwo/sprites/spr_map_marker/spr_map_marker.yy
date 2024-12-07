@@ -25,7 +25,7 @@
   ],
   "name":"spr_map_marker",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -81,7 +81,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":48,
+    "yorigin":32,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -160,6 +160,7 @@ function scr_playerstate_shoot() {
 			bullets = [[x, _y, x + lengthdir_x(_range_increment, _bullet_direction), _y + lengthdir_y(_range_increment, _bullet_direction)]];
 			player_shot = true;
 		}
+		if player_shot audio_play_sound(snd_gunshot_tp, 99, false);
 		current_magazine--;
 	} else if current_magazine == 0 and mouse_check_button_pressed(mb_left) {
 		player_shot = false;

@@ -20,6 +20,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"087eb25f-aa20-41d6-b3ba-e01336e0e06b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"087eb25f-aa20-41d6-b3ba-e01336e0e06b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"21669293-ec5d-4ac2-ae04-2ed166ebeb9e","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"21669293-ec5d-4ac2-ae04-2ed166ebeb9e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"981729b1-6a3e-4bf6-93af-9e29264d2072","blendMode":0,"displayName":"default","isLocked":false,"name":"981729b1-6a3e-4bf6-93af-9e29264d2072","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_map",

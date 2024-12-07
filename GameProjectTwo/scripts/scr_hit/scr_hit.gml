@@ -16,6 +16,11 @@ function hit_enemy(_enemy, _dmg) {
 
 function hit_player(_dmg) {
 	with (obj_player) {
+		audio_play_sound(snd_player_hurt, 99, false);
 		health -= _dmg;
+		if health <= 0 {
+			state = PLAYERSTATE.DEAD;
+			scr_playerstate_dead();
+		}
 	}
 }
