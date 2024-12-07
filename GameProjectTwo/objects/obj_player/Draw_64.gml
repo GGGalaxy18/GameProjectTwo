@@ -36,7 +36,7 @@ if !obj_menu_controller.show_menu {
 	#endregion
 
 	#region grenata gui
-	var _grenade_positions = [[130, 705], [160, 675], [130, 645]];
+	var _grenade_positions = [[145, 705], [120, 665], [85, 640]];
 	for (var _i=0; _i<cur_grenades; _i++) {
 		draw_sprite(spr_grenade_icon, 0, _grenade_positions[_i][0], _grenade_positions[_i][1]);
 	}
