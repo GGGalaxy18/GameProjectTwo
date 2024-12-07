@@ -50,7 +50,7 @@ if checkpoint_index < 7 {
 				case 6: if (checkpoint_tasks[6][$ "heal"]) { _spawn_crate = false; } break;
 			}
 			if _spawn_crate {
-				instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_tutorial_crate, _crate_struct);
+				instance_create_layer(camera_get_view_x(view_camera[0]) + view_wport + 200, random_range(450, view_hport), "Instances", obj_tutorial_crate, _crate_struct);
 			}
 		}
 	}
@@ -85,13 +85,23 @@ if checkpoint_index < 7 {
 		var _task = checkpoint_tasks[checkpoint_index];
 		switch (checkpoint_index) {
 			case 0:
-			if (_task[$ "W"] and _task[$ "A"] and _task[$ "S"] and _task[$ "D"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 1: if (_task[$ "sprint"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 2: if (_task[$ "shoot"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 3: if (_task[$ "grenade"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 4: if (_task[$ "crate_shot"] and _task[$ "crate_looted"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 5: if (_task[$ "flare"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; prev_checkpoint = 6; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
-			case 6: if (_task[$ "heal"]) { checkpoint_completed[checkpoint_index] = true; checkpoint_index = ++prev_checkpoint; _moved_checkpoint = true; } break;
+			if (_task[$ "W"] and _task[$ "A"] and _task[$ "S"] and _task[$ "D"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 1: if (_task[$ "sprint"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 2: if (_task[$ "shoot"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 3: if (_task[$ "grenade"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 4: if (_task[$ "crate_shot"] and _task[$ "crate_looted"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 5: if (_task[$ "flare"] and _task[$ "enemy_dead"]) { checkpoint_completed[checkpoint_index] = true; } break;
+			case 6: if (_task[$ "heal"]) { checkpoint_completed[checkpoint_index] = true; } break;
+		}
+		switch (checkpoint_index) {
+			case 0:
+			if (_task[$ "W"] and _task[$ "A"] and _task[$ "S"] and _task[$ "D"] and !instance_exists(obj_dialog_wasd)) { prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 1: if (_task[$ "sprint"] and !instance_exists(obj_dialog_sprint)) { prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 2: if (_task[$ "shoot"] and _task[$ "enemy_dead"] and !instance_exists(obj_dialog_shoot)) { prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 3: if (_task[$ "grenade"] and _task[$ "enemy_dead"] and !instance_exists(obj_dialog_grenade)) { prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 4: if (_task[$ "crate_shot"] and _task[$ "crate_looted"] and !instance_exists(obj_dialog_crate)) { prev_checkpoint = checkpoint_index; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 5: if (_task[$ "flare"] and _task[$ "enemy_dead"] and !instance_exists(obj_dialog_flare)) { prev_checkpoint = 6; checkpoint_index = _next_checkpoint; _moved_checkpoint = true; } break;
+			case 6: if (_task[$ "heal"] and !instance_exists(obj_dialog_heal)) { checkpoint_index = ++prev_checkpoint; _moved_checkpoint = true; } break;
 		}
 		if _moved_checkpoint and checkpoint_index < 7 {
 			if checkpoint_index == 6 and health == obj_player.max_health {
@@ -103,9 +113,15 @@ if checkpoint_index < 7 {
 	}
 	#endregion
 } else {
-	var _time_to_end_level = 90;
-	end_level_timer++;
-	if end_level_timer > _time_to_end_level {
-		room_goto_next();
-	}	
+	if !end_level {
+		end_level = true;
+		instance_create_layer(x, y, "Instances", obj_dialog_return);
+	}
+	if !instance_exists(obj_dialog_return) {
+		var _time_to_end_level = 90;
+		end_level_timer++;
+		if end_level_timer > _time_to_end_level {
+			room_goto(rm_hub);
+		}
+	}
 }

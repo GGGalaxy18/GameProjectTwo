@@ -36,4 +36,5 @@ lowest_grenade = 3;
 // health check
 lowest_health = 100;
 
+end_level = false;
 end_level_timer = 0;

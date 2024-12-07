@@ -163,7 +163,7 @@ if !in_boss_fight {
 			var _time_to_end_level = 90;
 			end_level_timer++;
 			if end_level_timer > _time_to_end_level {
-				room_goto(rm_title_screen);
+				room_goto(rm_hub);
 			}
 		}
 		#endregion
